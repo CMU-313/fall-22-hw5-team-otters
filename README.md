@@ -5,12 +5,20 @@
 PITEST is integrated into Maven CI by inputting PITEST into the `pom.xml` as a plug-in. Please see results for docs-core below:
 
 <h3 align="center">
-  <img src="PITTEST_docs-core.png" alt="PITEST_Results" width=500 />
+  <img src="PITTEST_docs-core.png" alt="PITEST_Results" width=600 />
 </h3>
 
-160 classes from Docs-Core was tested, with a mutation coverage of 14%.
+160 classes from Docs-Core was tested, with a mutation coverage of 14%. However, this test took very long and will be too expensive to execute in continuous integration on Github actions. As a result, our team decided to test a specific class: `com.sismics.docs.core.model.jpa` in docs-core and implement that into the Github CI. 
 
-– – – – -
+<h3 align="center">
+  <img src="jpa_testing_pittest.png" alt="JPA PITesting Results" width=600 />
+</h3>
+
+Here, we see that only models were being tested. Teedy has 26 types of model classes (ex. document, comment, documentTag, route, etc.) We see that the coverage of TestJpa.java is already very low, with 6%. This is probably the reason why the mutation coverage is extremely low as well, with only 5% of all mutations "killed" or resulting in test failures. However, the tests that do exist are relatively strong against mutations, with 81% of mutations that are covered by tests being killed.
+
+These statistics can also be found in Github Actions named "PITEST Mutation Testing".
+
+-----
 
 <h3 align="center">
   <img src="https://teedy.io/img/github-title.png" alt="Teedy" width=500 />
