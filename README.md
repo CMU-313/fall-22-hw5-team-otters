@@ -8,7 +8,9 @@ PITEST is integrated into Maven CI by inputting PITEST into the `pom.xml` as a p
   <img src="PITTEST_docs-core.png" alt="PITEST_Results" width=600 />
 </h3>
 
-160 classes from Docs-Core was tested, with a mutation coverage of 14%. However, this test took very long and will be too expensive to execute in continuous integration on Github actions. As a result, our team decided to test a specific class: `com.sismics.docs.core.model.jpa` in docs-core and implement that into the Github CI. 
+160 classes from Docs-Core was tested. Tests covered 20% of all lines, and 14% of mutations were killed by failing tests. However, of the lines that are covered by tests, only 55% of mutations in those lines were killed by tests. This means that the tests that do exists is not good enough to detect mutations.  
+
+However, this test took very long and will be too expensive to execute in continuous integration on Github actions. As a result, our team decided to test a specific class: `com.sismics.docs.core.model.jpa` in docs-core and implement that into the Github CI. 
 
 <h3 align="center">
   <img src="jpa_testing_pittest.png" alt="JPA PITesting Results" width=600 />
