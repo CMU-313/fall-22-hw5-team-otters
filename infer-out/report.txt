@@ -1,0 +1,1298 @@
+#0
+docs-core/src/main/java/com/sismics/util/EnvironmentUtil.java:10: error: Null Dereference
+  object returned by `getProperty("os.name")` could be null and is dereferenced at line 10.
+   8.   public class EnvironmentUtil {
+   9.   
+  10. >     private static String OS = System.getProperty("os.name").toLowerCase();
+  11.   
+  12.       private static String APPLICATION_MODE = System.getProperty("application.mode");
+
+#1
+docs-core/src/main/java/com/sismics/docs/core/dao/RoleBaseFunctionDao.java:28: error: Null Dereference
+  object `em` last assigned on line 24 could be null and is dereferenced at line 28.
+  26.           sb.append(" where rbf.RBF_IDROLE_C in (:roleIdSet) and rbf.RBF_DELETEDATE_D is null");
+  27.           sb.append(" and r.ROL_ID_C = rbf.RBF_IDROLE_C and r.ROL_DELETEDATE_D is null");
+  28. >         Query q = em.createNativeQuery(sb.toString());
+  29.           q.setParameter("roleIdSet", roleIdSet);
+  30.           return Sets.newHashSet(q.getResultList());
+
+#2
+docs-core/src/main/java/com/sismics/docs/core/dao/ShareDao.java:30: error: Null Dereference
+  object `em` last assigned on line 28 could be null and is dereferenced at line 30.
+  28.           EntityManager em = ThreadLocalContext.get().getEntityManager();
+  29.           share.setCreateDate(new Date());
+  30. >         em.persist(share);
+  31.           
+  32.           return share.getId();
+
+#3
+docs-core/src/main/java/com/sismics/docs/core/util/jpa/QueryUtil.java:25: error: Null Dereference
+  object `em` last assigned on line 24 could be null and is dereferenced at line 25.
+  23.       public static Query getNativeQuery(QueryParam queryParam) {
+  24.           EntityManager em = ThreadLocalContext.get().getEntityManager();
+  25. >         Query query = em.createNativeQuery(queryParam.getQueryString());
+  26.           for (Entry<String, Object> entry : queryParam.getParameterMap().entrySet()) {
+  27.               query.setParameter(entry.getKey(), entry.getValue());
+
+#4
+docs-core/src/main/java/com/sismics/docs/core/dao/RelationDao.java:34: error: Null Dereference
+  object `em` last assigned on line 25 could be null and is dereferenced at line 34.
+  32.           
+  33.           // Perform the query
+  34. >         Query q = em.createNativeQuery(sb.toString());
+  35.           q.setParameter("documentId", documentId);
+  36.           List<Object[]> l = q.getResultList();
+
+#5
+docs-core/src/main/java/com/sismics/docs/core/dao/VocabularyDao.java:30: error: Null Dereference
+  object `em` last assigned on line 29 could be null and is dereferenced at line 30.
+  28.           // Create the comment
+  29.           EntityManager em = ThreadLocalContext.get().getEntityManager();
+  30. >         em.persist(vocabulary);
+  31.           
+  32.           return vocabulary.getId();
+
+#6
+docs-core/src/main/java/com/sismics/docs/core/util/AuditLogUtil.java:31: error: Null Dereference
+  object `em` last assigned on line 30 could be null and is dereferenced at line 31.
+  29.           // Get the entity ID
+  30.           EntityManager em = ThreadLocalContext.get().getEntityManager();
+  31. >         String entityId = (String) em.getEntityManagerFactory().getPersistenceUnitUtil().getIdentifier(loggable);
+  32.           
+  33.           // Create the audit log
+
+#7
+docs-web/src/test/java/com/sismics/docs/rest/TestRouteResource.java:153: error: Null Dereference
+  object returned by `popEmail()` could be null and is dereferenced at line 153.
+  151.           Assert.assertEquals("Add relevant files to the document", step.getString("name"));
+  152.           Assert.assertTrue(json.getBoolean("readable"));
+  153. >         Assert.assertTrue(popEmail().contains("workflow step"));
+  154.   
+  155.           // Get the route on document 1
+
+#8
+docs-web/src/test/java/com/sismics/docs/rest/TestRouteResource.java:76: error: Null Dereference
+  object returned by `popEmail()` could be null and is dereferenced at line 76.
+  74.           JsonObject step = json.getJsonObject("route_step");
+  75.           Assert.assertEquals("Check the document's metadata", step.getString("name"));
+  76. >         Assert.assertTrue(popEmail().contains("workflow step"));
+  77.   
+  78.           // List all documents with route1
+
+#9
+docs-core/src/main/java/com/sismics/docs/core/dao/AuthenticationTokenDao.java:27: error: Null Dereference
+  object `em` last assigned on line 26 could be null and is dereferenced at line 27.
+  25.       public AuthenticationToken get(String id) {
+  26.           EntityManager em = ThreadLocalContext.get().getEntityManager();
+  27. >         return em.find(AuthenticationToken.class, id);
+  28.       }
+  29.   
+
+#10
+docs-core/src/main/java/com/sismics/docs/core/dao/ContributorDao.java:31: error: Null Dereference
+  object `em` last assigned on line 30 could be null and is dereferenced at line 31.
+  29.           // Create the contributor
+  30.           EntityManager em = ThreadLocalContext.get().getEntityManager();
+  31. >         em.persist(contributor);
+  32.           
+  33.           return contributor.getId();
+
+#11
+docs-core/src/main/java/com/sismics/docs/core/dao/DocumentMetadataDao.java:32: error: Null Dereference
+  object `em` last assigned on line 31 could be null and is dereferenced at line 32.
+  30.           // Create the document metadata
+  31.           EntityManager em = ThreadLocalContext.get().getEntityManager();
+  32. >         em.persist(documentMetadata);
+  33.   
+  34.           return documentMetadata.getId();
+
+#12
+docs-core/src/main/java/com/sismics/docs/core/dao/PasswordRecoveryDao.java:32: error: Null Dereference
+  object `em` last assigned on line 31 could be null and is dereferenced at line 32.
+  30.   
+  31.           EntityManager em = ThreadLocalContext.get().getEntityManager();
+  32. >         em.persist(passwordRecovery);
+  33.           
+  34.           return passwordRecovery.getId();
+
+#13
+docs-core/src/test/java/com/sismics/docs/core/util/TestFileUtil.java:33: error: Null Dereference
+  object `formatHandler` last assigned on line 30 could be null and is dereferenced at line 33.
+  31.           Assert.assertNotNull(formatHandler);
+  32.           Assert.assertTrue(formatHandler instanceof OdtFormatHandler);
+  33. >         String content = formatHandler.extractContent("eng", path);
+  34.           Assert.assertTrue(content.contains("Lorem ipsum dolor sit amen."));
+  35.       }
+
+#14
+docs-core/src/main/java/com/sismics/docs/core/dao/FileDao.java:36: error: Null Dereference
+  object `em` last assigned on line 34 could be null and is dereferenced at line 36.
+  34.           EntityManager em = ThreadLocalContext.get().getEntityManager();
+  35.           file.setCreateDate(new Date());
+  36. >         em.persist(file);
+  37.           
+  38.           // Create audit log
+
+#15
+docs-core/src/main/java/com/sismics/docs/core/util/format/TextPlainFormatHandler.java:32: error: Null Dereference
+  object returned by `getInstance().getFileService()` could be null and is dereferenced at line 32.
+  30.       public BufferedImage generateThumbnail(Path file) throws Exception {
+  31.           Document output = new Document(PageSize.A4, 40, 40, 40, 40);
+  32. >         Path tempFile = AppContext.getInstance().getFileService().createTemporaryFile();
+  33.           OutputStream pdfOutputStream = Files.newOutputStream(tempFile);
+  34.           PdfWriter.getInstance(output, pdfOutputStream);
+
+#16
+docs-core/src/main/java/com/sismics/docs/core/dao/AuditLogDao.java:38: error: Null Dereference
+  object `em` last assigned on line 36 could be null and is dereferenced at line 38.
+  36.           EntityManager em = ThreadLocalContext.get().getEntityManager();
+  37.           auditLog.setCreateDate(new Date());
+  38. >         em.persist(auditLog);
+  39.           
+  40.           return auditLog.getId();
+
+#17
+docs-core/src/main/java/com/sismics/docs/core/dao/CommentDao.java:38: error: Null Dereference
+  object `em` last assigned on line 36 could be null and is dereferenced at line 38.
+  36.           EntityManager em = ThreadLocalContext.get().getEntityManager();
+  37.           comment.setCreateDate(new Date());
+  38. >         em.persist(comment);
+  39.           
+  40.           // Create audit log
+
+#18
+docs-core/src/main/java/com/sismics/docs/core/dao/RouteDao.java:38: error: Null Dereference
+  object `em` last assigned on line 36 could be null and is dereferenced at line 38.
+  36.           EntityManager em = ThreadLocalContext.get().getEntityManager();
+  37.           route.setCreateDate(new Date());
+  38. >         em.persist(route);
+  39.   
+  40.           // Create audit log
+
+#19
+docs-core/src/main/java/com/sismics/docs/core/dao/DocumentDao.java:39: error: Null Dereference
+  object `em` last assigned on line 38 could be null and is dereferenced at line 39.
+  37.           // Create the document
+  38.           EntityManager em = ThreadLocalContext.get().getEntityManager();
+  39. >         em.persist(document);
+  40.           
+  41.           // Create audit log
+
+#20
+docs-core/src/main/java/com/sismics/docs/core/dao/GroupDao.java:34: error: Null Dereference
+  object `em` last assigned on line 33 could be null and is dereferenced at line 34.
+  32.       public Group getActiveByName(String name) {
+  33.           EntityManager em = ThreadLocalContext.get().getEntityManager();
+  34. >         Query q = em.createQuery("select g from Group g where g.name = :name and g.deleteDate is null");
+  35.           q.setParameter("name", name);
+  36.           try {
+
+#21
+docs-core/src/main/java/com/sismics/docs/core/dao/RouteStepDao.java:39: error: Null Dereference
+  object `em` last assigned on line 37 could be null and is dereferenced at line 39.
+  37.           EntityManager em = ThreadLocalContext.get().getEntityManager();
+  38.           routeStep.setCreateDate(new Date());
+  39. >         em.persist(routeStep);
+  40.   
+  41.           return routeStep.getId();
+
+#22
+docs-core/src/main/java/com/sismics/docs/core/dao/AclDao.java:39: error: Null Dereference
+  object `em` last assigned on line 38 could be null and is dereferenced at line 39.
+  37.           // Create the ACL
+  38.           EntityManager em = ThreadLocalContext.get().getEntityManager();
+  39. >         em.persist(acl);
+  40.   
+  41.           // Create audit log
+
+#23
+docs-core/src/main/java/com/sismics/docs/core/dao/MetadataDao.java:39: error: Null Dereference
+  object `em` last assigned on line 38 could be null and is dereferenced at line 39.
+  37.           // Create the metadata
+  38.           EntityManager em = ThreadLocalContext.get().getEntityManager();
+  39. >         em.persist(metadata);
+  40.   
+  41.           // Create audit log
+
+#24
+docs-core/src/main/java/com/sismics/docs/core/dao/TagDao.java:36: error: Null Dereference
+  object `em` last assigned on line 34 could be null and is dereferenced at line 36.
+  34.           EntityManager em = ThreadLocalContext.get().getEntityManager();
+  35.           try {
+  36. >             return em.find(Tag.class, id);
+  37.           } catch (NoResultException e) {
+  38.               return null;
+
+#25
+docs-core/src/main/java/com/sismics/docs/core/dao/RouteModelDao.java:41: error: Null Dereference
+  object `em` last assigned on line 39 could be null and is dereferenced at line 41.
+  39.           EntityManager em = ThreadLocalContext.get().getEntityManager();
+  40.           routeModel.setCreateDate(new Date());
+  41. >         em.persist(routeModel);
+  42.   
+  43.           // Create audit log
+
+#26
+docs-core/src/main/java/com/sismics/docs/core/listener/async/AclCreatedAsyncListener.java:35: error: Null Dereference
+  object returned by `getInstance().getIndexingHandler()` could be null and is dereferenced at line 35.
+  33.   
+  34.           TransactionUtil.handle(() -> AppContext.getInstance().getIndexingHandler()
+  35. >                 .createAcl(event.getSourceId(), event.getPerm(), event.getTargetId()));
+  36.       }
+  37.   }
+
+#27
+docs-core/src/main/java/com/sismics/docs/core/listener/async/AclDeletedAsyncListener.java:35: error: Null Dereference
+  object returned by `getInstance().getIndexingHandler()` could be null and is dereferenced at line 35.
+  33.   
+  34.           TransactionUtil.handle(() -> AppContext.getInstance().getIndexingHandler()
+  35. >                 .deleteAcl(event.getSourceId(), event.getPerm(), event.getTargetId()));
+  36.       }
+  37.   }
+
+#28
+docs-core/src/main/java/com/sismics/docs/core/listener/async/RebuildIndexAsyncListener.java:41: error: Null Dereference
+  object returned by `getInstance().getIndexingHandler()` could be null and is dereferenced at line 41.
+  39.   
+  40.           // Clear the index
+  41. >         AppContext.getInstance().getIndexingHandler().clearIndex();
+  42.   
+  43.           // Index all documents
+
+#29
+docs-core/src/main/java/com/sismics/docs/core/dao/AuthenticationTokenDao.java:41: error: Null Dereference
+  object `em` last assigned on line 37 could be null and is dereferenced at line 41.
+  39.           authenticationToken.setId(UUID.randomUUID().toString());
+  40.           authenticationToken.setCreationDate(new Date());
+  41. >         em.persist(authenticationToken);
+  42.           
+  43.           return authenticationToken.getId();
+
+#30
+docs-core/src/main/java/com/sismics/docs/core/listener/async/DocumentDeletedAsyncListener.java:36: error: Null Dereference
+  object returned by `getInstance().getIndexingHandler()` could be null and is dereferenced at line 36.
+  34.           TransactionUtil.handle(() -> {
+  35.               // Update index
+  36. >             AppContext.getInstance().getIndexingHandler().deleteDocument(event.getDocumentId());
+  37.           });
+  38.       }
+
+#31
+docs-core/src/test/java/com/sismics/docs/core/util/TestFileUtil.java:43: error: Null Dereference
+  object `formatHandler` last assigned on line 40 could be null and is dereferenced at line 43.
+  41.           Assert.assertNotNull(formatHandler);
+  42.           Assert.assertTrue(formatHandler instanceof DocxFormatHandler);
+  43. >         String content = formatHandler.extractContent("eng", path);
+  44.           Assert.assertTrue(content.contains("Lorem ipsum dolor sit amen."));
+  45.       }
+
+#32
+docs-core/src/main/java/com/sismics/docs/core/dao/ShareDao.java:44: error: Null Dereference
+  object `em` last assigned on line 41 could be null and is dereferenced at line 44.
+  42.               
+  43.           // Get the share
+  44. >         Query q = em.createQuery("select s from Share s where s.id = :id and s.deleteDate is null");
+  45.           q.setParameter("id", id);
+  46.           Share shareDb = (Share) q.getSingleResult();
+
+#33
+docs-core/src/main/java/com/sismics/docs/core/listener/async/DocumentCreatedAsyncListener.java:54: error: Null Dereference
+  object returned by `getInstance().getIndexingHandler()` could be null and is dereferenced at line 54.
+  52.   
+  53.               // Update index
+  54. >             AppContext.getInstance().getIndexingHandler().createDocument(document);
+  55.           });
+  56.       }
+
+#34
+docs-core/src/main/java/com/sismics/docs/core/listener/async/FileDeletedAsyncListener.java:41: error: Null Dereference
+  object returned by `getInstance().getIndexingHandler()` could be null and is dereferenced at line 41.
+  39.           TransactionUtil.handle(() -> {
+  40.               // Update index
+  41. >             AppContext.getInstance().getIndexingHandler().deleteDocument(event.getFileId());
+  42.           });
+  43.       }
+
+#35
+docs-core/src/main/java/com/sismics/docs/core/dao/VocabularyDao.java:46: error: Null Dereference
+  object `em` last assigned on line 43 could be null and is dereferenced at line 46.
+  44.           
+  45.           // Get the entries
+  46. >         Query q = em.createQuery("select v from Vocabulary v where v.name = :name order by v.order");
+  47.           q.setParameter("name", name);
+  48.           return q.getResultList();
+
+#36
+docs-core/src/main/java/com/sismics/docs/core/dao/ContributorDao.java:45: error: Null Dereference
+  object `em` last assigned on line 44 could be null and is dereferenced at line 45.
+  43.       public List<Contributor> findByDocumentId(String documentId) {
+  44.           EntityManager em = ThreadLocalContext.get().getEntityManager();
+  45. >         Query q = em.createQuery("select c from Contributor c where c.documentId = :documentId");
+  46.           q.setParameter("documentId", documentId);
+  47.           return q.getResultList();
+
+#37
+docs-core/src/main/java/com/sismics/docs/core/dao/DocumentMetadataDao.java:47: error: Null Dereference
+  object `em` last assigned on line 44 could be null and is dereferenced at line 47.
+  45.   
+  46.           // Get the document metadata
+  47. >         Query q = em.createQuery("select u from DocumentMetadata u where u.id = :id");
+  48.           q.setParameter("id", documentMetadata.getId());
+  49.           DocumentMetadata documentMetadataDb = (DocumentMetadata) q.getSingleResult();
+
+#38
+docs-core/src/main/java/com/sismics/docs/core/dao/PasswordRecoveryDao.java:46: error: Null Dereference
+  object `em` last assigned on line 44 could be null and is dereferenced at line 46.
+  44.           EntityManager em = ThreadLocalContext.get().getEntityManager();
+  45.           try {
+  46. >             Query q = em.createQuery("select r from PasswordRecovery r where r.id = :id and r.createDate > :createDateMin and r.deleteDate is null");
+  47.               q.setParameter("id", id);
+  48.               q.setParameter("createDateMin", new DateTime().withFieldAdded(DurationFieldType.hours(), -1 * Constants.PASSWORD_RECOVERY_EXPIRATION_HOUR).toDate());
+
+#39
+docs-core/src/main/java/com/sismics/docs/core/listener/async/DocumentUpdatedAsyncListener.java:62: error: Null Dereference
+  object returned by `getInstance().getIndexingHandler()` could be null and is dereferenced at line 62.
+  60.               // Update database and index
+  61.               documentDao.updateFileId(document);
+  62. >             AppContext.getInstance().getIndexingHandler().updateDocument(document);
+  63.   
+  64.               // Update contributors list
+
+#40
+docs-core/src/main/java/com/sismics/docs/core/listener/async/RebuildIndexAsyncListener.java:50: error: Null Dereference
+  object returned by `getInstance().getIndexingHandler()` could be null and is dereferenced at line 50.
+  48.               do {
+  49.                   documentList = documentDao.findAll(offset, 100);
+  50. >                 AppContext.getInstance().getIndexingHandler().createDocuments(documentList);
+  51.                   offset += 100;
+  52.               } while (documentList.size() > 0);
+
+#41
+docs-core/src/main/java/com/sismics/docs/core/dao/UserDao.java:48: error: Null Dereference
+  object `em` last assigned on line 47 could be null and is dereferenced at line 48.
+  46.       public User authenticate(String username, String password) {
+  47.           EntityManager em = ThreadLocalContext.get().getEntityManager();
+  48. >         Query q = em.createQuery("select u from User u where u.username = :username and u.deleteDate is null");
+  49.           q.setParameter("username", username);
+  50.           try {
+
+#42
+docs-core/src/main/java/com/sismics/docs/core/util/format/PdfFormatHandler.java:61: error: Null Dereference
+  object `pdfDocument` last assigned on line 59 could be null and is dereferenced at line 61.
+  59.                    PDDocument pdfDocument = PDDocument.load(inputStream)) {
+  60.                   PDFRenderer renderer = new PDFRenderer(pdfDocument);
+  61. >                 for (int pageIndex = 0; pageIndex < pdfDocument.getNumberOfPages(); pageIndex++) {
+  62.                       log.info("OCR page " + (pageIndex + 1) + "/" + pdfDocument.getNumberOfPages() + " of PDF file containing only images");
+  63.                       sb.append(" ");
+
+#43
+docs-core/src/main/java/com/sismics/docs/core/dao/TagDao.java:52: error: Null Dereference
+  object `em` last assigned on line 49 could be null and is dereferenced at line 52.
+  50.           
+  51.           // Get current tag links
+  52. >         Query q = em.createQuery("select dt from DocumentTag dt where dt.documentId = :documentId and dt.deleteDate is null");
+  53.           q.setParameter("documentId", documentId);
+  54.           @SuppressWarnings("unchecked")
+
+#44
+docs-core/src/test/java/com/sismics/docs/core/util/TestFileUtil.java:53: error: Null Dereference
+  object `formatHandler` last assigned on line 50 could be null and is dereferenced at line 53.
+  51.           Assert.assertNotNull(formatHandler);
+  52.           Assert.assertTrue(formatHandler instanceof PptxFormatHandler);
+  53. >         String content = formatHandler.extractContent("eng", path);
+  54.           Assert.assertTrue(content.contains("Scaling"));
+  55.       }
+
+#45
+docs-core/src/main/java/com/sismics/docs/core/dao/GroupDao.java:51: error: Null Dereference
+  object `em` last assigned on line 50 could be null and is dereferenced at line 51.
+  49.       public Group getActiveById(String id) {
+  50.           EntityManager em = ThreadLocalContext.get().getEntityManager();
+  51. >         Query q = em.createQuery("select g from Group g where g.id = :id and g.deleteDate is null");
+  52.           q.setParameter("id", id);
+  53.           try {
+
+#46
+docs-core/src/main/java/com/sismics/docs/core/dao/FileDao.java:53: error: Null Dereference
+  object `em` last assigned on line 52 could be null and is dereferenced at line 53.
+  51.       public List<File> findAll(int offset, int limit) {
+  52.           EntityManager em = ThreadLocalContext.get().getEntityManager();
+  53. >         TypedQuery<File> q = em.createQuery("select f from File f where f.deleteDate is null", File.class);
+  54.           q.setFirstResult(offset);
+  55.           q.setMaxResults(limit);
+
+#47
+docs-core/src/main/java/com/sismics/docs/core/dao/AuthenticationTokenDao.java:54: error: Null Dereference
+  object `em` last assigned on line 53 could be null and is dereferenced at line 54.
+  52.       public void delete(String authenticationTokenId) throws Exception {
+  53.           EntityManager em = ThreadLocalContext.get().getEntityManager();
+  54. >         AuthenticationToken authenticationToken = em.find(AuthenticationToken.class, authenticationTokenId);
+  55.           if (authenticationToken != null) {
+  56.               em.remove(authenticationToken);
+
+#48
+docs-core/src/main/java/com/sismics/docs/core/dao/CommentDao.java:56: error: Null Dereference
+  object `em` last assigned on line 53 could be null and is dereferenced at line 56.
+  54.               
+  55.           // Get the comment
+  56. >         Query q = em.createQuery("select c from Comment c where c.id = :id and c.deleteDate is null");
+  57.           q.setParameter("id", id);
+  58.           Comment commentDb = (Comment) q.getSingleResult();
+
+#49
+docs-core/src/main/java/com/sismics/docs/core/dao/AclDao.java:56: error: Null Dereference
+  object `em` last assigned on line 55 could be null and is dereferenced at line 56.
+  54.       public List<Acl> getByTargetId(String targetId) {
+  55.           EntityManager em = ThreadLocalContext.get().getEntityManager();
+  56. >         Query q = em.createQuery("select a from Acl a where a.targetId = :targetId and a.deleteDate is null");
+  57.           q.setParameter("targetId", targetId);
+  58.   
+
+#50
+docs-core/src/main/java/com/sismics/docs/core/dao/DocumentDao.java:56: error: Null Dereference
+  object `em` last assigned on line 55 could be null and is dereferenced at line 56.
+  54.       public List<Document> findAll(int offset, int limit) {
+  55.           EntityManager em = ThreadLocalContext.get().getEntityManager();
+  56. >         TypedQuery<Document> q = em.createQuery("select d from Document d where d.deleteDate is null", Document.class);
+  57.           q.setFirstResult(offset);
+  58.           q.setMaxResults(limit);
+
+#51
+docs-core/src/main/java/com/sismics/docs/core/dao/MetadataDao.java:58: error: Null Dereference
+  object `em` last assigned on line 55 could be null and is dereferenced at line 58.
+  56.   
+  57.           // Get the metadata
+  58. >         Query q = em.createQuery("select r from Metadata r where r.id = :id and r.deleteDate is null");
+  59.           q.setParameter("id", metadata.getId());
+  60.           Metadata metadataDb = (Metadata) q.getSingleResult();
+
+#52
+docs-core/src/main/java/com/sismics/docs/core/dao/RouteModelDao.java:60: error: Null Dereference
+  object `em` last assigned on line 57 could be null and is dereferenced at line 60.
+  58.   
+  59.           // Get the route model
+  60. >         Query q = em.createQuery("select r from RouteModel r where r.id = :id and r.deleteDate is null");
+  61.           q.setParameter("id", routeModel.getId());
+  62.           RouteModel routeModelDb = (RouteModel) q.getSingleResult();
+
+#53
+docs-core/src/main/java/com/sismics/docs/core/dao/ContributorDao.java:62: error: Null Dereference
+  object `em` last assigned on line 58 could be null and is dereferenced at line 62.
+  60.           sb.append(" join T_USER u on u.USE_ID_C = c.CTR_IDUSER_C ");
+  61.           sb.append(" where c.CTR_IDDOC_C = :documentId ");
+  62. >         Query q = em.createNativeQuery(sb.toString());
+  63.           q.setParameter("documentId", documentId);
+  64.           List<Object[]> l = q.getResultList();
+
+#54
+docs-core/src/main/java/com/sismics/docs/core/dao/VocabularyDao.java:60: error: Null Dereference
+  object `em` last assigned on line 58 could be null and is dereferenced at line 60.
+  58.           EntityManager em = ThreadLocalContext.get().getEntityManager();
+  59.           try {
+  60. >             return em.find(Vocabulary.class, id);
+  61.           } catch (NoResultException e) {
+  62.               return null;
+
+#55
+docs-core/src/main/java/com/sismics/docs/core/listener/async/RebuildIndexAsyncListener.java:62: error: Null Dereference
+  object returned by `getInstance().getIndexingHandler()` could be null and is dereferenced at line 62.
+  60.               do {
+  61.                   fileList = fileDao.findAll(offset, 100);
+  62. >                 AppContext.getInstance().getIndexingHandler().createFiles(fileList);
+  63.                   offset += 100;
+  64.               } while (fileList.size() > 0);
+
+#56
+docs-web/src/main/java/com/sismics/docs/rest/resource/AuditLogResource.java:85: error: Null Dereference
+  object returned by `paginatedList.getResultList()` could be null and is dereferenced at line 85.
+  83.           // Assemble the results
+  84.           JsonArrayBuilder logs = Json.createArrayBuilder();
+  85. >         for (AuditLogDto auditLogDto : paginatedList.getResultList()) {
+  86.               logs.add(Json.createObjectBuilder()
+  87.                       .add("id", auditLogDto.getId())
+
+#57
+docs-core/src/main/java/com/sismics/docs/core/dao/RelationDao.java:62: error: Null Dereference
+  object `em` last assigned on line 59 could be null and is dereferenced at line 62.
+  60.           
+  61.           // Get current relations from this document
+  62. >         Query q = em.createQuery("select r from Relation r where r.fromDocumentId = :documentId and r.deleteDate is null");
+  63.           q.setParameter("documentId", documentId);
+  64.           @SuppressWarnings("unchecked")
+
+#58
+docs-core/src/main/java/com/sismics/docs/core/util/ActionUtil.java:60: error: Null Dereference
+  object `action` last assigned on line 59 could be null and is dereferenced at line 60.
+  58.       public static void validateAction(ActionType actionType, JsonObject actionData) throws Exception {
+  59.           Action action = findAction(actionType);
+  60. >         action.validate(actionData);
+  61.       }
+  62.   
+
+#59
+docs-core/src/test/java/com/sismics/docs/core/util/TestFileUtil.java:63: error: Null Dereference
+  object `formatHandler` last assigned on line 60 could be null and is dereferenced at line 63.
+  61.           Assert.assertNotNull(formatHandler);
+  62.           Assert.assertTrue(formatHandler instanceof PdfFormatHandler);
+  63. >         String content = formatHandler.extractContent("eng", path);
+  64.           Assert.assertTrue(content.contains("All human beings are born free and equal in dignity and rights."));
+  65.       }
+
+#60
+docs-core/src/main/java/com/sismics/docs/core/util/FileUtil.java:66: error: Null Dereference
+  object returned by `getInstance().getFileService()` could be null and is dereferenced at line 66.
+  64.           BufferedImage deskewedImage = Scalr.rotate(resizedImage, - imageDeskew.getSkewAngle(), Scalr.OP_ANTIALIAS, Scalr.OP_GRAYSCALE);
+  65.           resizedImage.flush();
+  66. >         Path tmpFile = AppContext.getInstance().getFileService().createTemporaryFile();
+  67.           ImageIO.write(deskewedImage, "tiff", tmpFile.toFile());
+  68.   
+
+#61
+docs-core/src/main/java/com/sismics/docs/core/util/format/DocxFormatHandler.java:61: error: Null Dereference
+  object returned by `getInstance().getFileService()` could be null and is dereferenced at line 61.
+  59.       private Path getGeneratedPdf(Path file) throws Exception {
+  60.           if (temporaryPdfFile == null) {
+  61. >             temporaryPdfFile = AppContext.getInstance().getFileService().createTemporaryFile();
+  62.               try (InputStream inputStream = Files.newInputStream(file);
+  63.                    OutputStream outputStream = Files.newOutputStream(temporaryPdfFile)) {
+
+#62
+docs-core/src/main/java/com/sismics/docs/core/util/format/OdtFormatHandler.java:61: error: Null Dereference
+  object returned by `getInstance().getFileService()` could be null and is dereferenced at line 61.
+  59.       private Path getGeneratedPdf(Path file) throws Exception {
+  60.           if (temporaryPdfFile == null) {
+  61. >             temporaryPdfFile = AppContext.getInstance().getFileService().createTemporaryFile();
+  62.               try (InputStream inputStream = Files.newInputStream(file);
+  63.                    OutputStream outputStream = Files.newOutputStream(temporaryPdfFile)) {
+
+#63
+docs-core/src/main/java/com/sismics/docs/core/dao/PasswordRecoveryDao.java:62: error: Null Dereference
+  object `em` last assigned on line 61 could be null and is dereferenced at line 62.
+  60.       public void deleteActiveByLogin(String username) {
+  61.           EntityManager em = ThreadLocalContext.get().getEntityManager();
+  62. >         Query q = em.createQuery("update PasswordRecovery r set r.deleteDate = :deleteDate where r.username = :username and r.createDate > :createDateMin and r.deleteDate is null");
+  63.           q.setParameter("username", username);
+  64.           q.setParameter("deleteDate", new Date());
+
+#64
+docs-core/src/main/java/com/sismics/docs/core/dao/DocumentMetadataDao.java:71: error: Null Dereference
+  object `em` last assigned on line 65 could be null and is dereferenced at line 71.
+  69.   
+  70.           // Perform the search
+  71. >         Query q = em.createNativeQuery(sb.toString());
+  72.           q.setParameter("documentId", documentId);
+  73.           List<Object[]> l = q.getResultList();
+
+#65
+docs-core/src/main/java/com/sismics/docs/core/dao/FileDao.java:67: error: Null Dereference
+  object `em` last assigned on line 66 could be null and is dereferenced at line 67.
+  65.       public List<File> findByUserId(String userId) {
+  66.           EntityManager em = ThreadLocalContext.get().getEntityManager();
+  67. >         TypedQuery<File> q = em.createQuery("select f from File f where f.userId = :userId and f.deleteDate is null", File.class);
+  68.           q.setParameter("userId", userId);
+  69.           return q.getResultList();
+
+#66
+docs-core/src/main/java/com/sismics/docs/core/dao/GroupDao.java:73: error: Null Dereference
+  object `em` last assigned on line 72 could be null and is dereferenced at line 73.
+  71.           // Create the group
+  72.           EntityManager em = ThreadLocalContext.get().getEntityManager();
+  73. >         em.persist(group);
+  74.           
+  75.           // Create audit log
+
+#67
+docs-core/src/main/java/com/sismics/docs/core/dao/AuthenticationTokenDao.java:74: error: Null Dereference
+  object `em` last assigned on line 73 could be null and is dereferenced at line 74.
+  72.   
+  73.           EntityManager em = ThreadLocalContext.get().getEntityManager();
+  74. >         Query q = em.createNativeQuery(sb.toString());
+  75.           q.setParameter("userId", userId);
+  76.           q.setParameter("longLasted", false);
+
+#68
+docs-core/src/main/java/com/sismics/docs/core/dao/DocumentDao.java:70: error: Null Dereference
+  object `em` last assigned on line 69 could be null and is dereferenced at line 70.
+  68.       public List<Document> findByUserId(String userId) {
+  69.           EntityManager em = ThreadLocalContext.get().getEntityManager();
+  70. >         TypedQuery<Document> q = em.createQuery("select d from Document d where d.userId = :userId and d.deleteDate is null", Document.class);
+  71.           q.setParameter("userId", userId);
+  72.           return q.getResultList();
+
+#69
+docs-core/src/test/java/com/sismics/docs/core/util/TestFileUtil.java:73: error: Null Dereference
+  object `formatHandler` last assigned on line 70 could be null and is dereferenced at line 73.
+  71.           Assert.assertNotNull(formatHandler);
+  72.           Assert.assertTrue(formatHandler instanceof PdfFormatHandler);
+  73. >         String content = formatHandler.extractContent("eng", path);
+  74.           Assert.assertTrue(content.contains("All human beings are born free and equal in dignity and rights."));
+  75.       }
+
+#70
+docs-core/src/main/java/com/sismics/docs/core/dao/AclDao.java:83: error: Null Dereference
+  object `em` last assigned on line 70 could be null and is dereferenced at line 83.
+  81.   
+  82.           // Perform the query
+  83. >         Query q = em.createNativeQuery(sb.toString());
+  84.           q.setParameter("sourceId", sourceId);
+  85.           if (type != null) {
+
+#71
+docs-core/src/main/java/com/sismics/docs/core/dao/UserDao.java:76: error: Null Dereference
+  object `em` last assigned on line 75 could be null and is dereferenced at line 76.
+  74.           // Checks for user unicity
+  75.           EntityManager em = ThreadLocalContext.get().getEntityManager();
+  76. >         Query q = em.createQuery("select u from User u where u.username = :username and u.deleteDate is null");
+  77.           q.setParameter("username", user.getUsername());
+  78.           List<?> l = q.getResultList();
+
+#72
+docs-core/src/main/java/com/sismics/docs/core/util/ActionUtil.java:72: error: Null Dereference
+  object `action` last assigned on line 71 could be null and is dereferenced at line 72.
+  70.       public static void executeAction(ActionType actionType, JsonObject actionData, DocumentDto documentDto) {
+  71.           Action action = findAction(actionType);
+  72. >         action.execute(documentDto, actionData);
+  73.       }
+  74.   }
+
+#73
+docs-core/src/main/java/com/sismics/docs/core/dao/VocabularyDao.java:75: error: Null Dereference
+  object `em` last assigned on line 72 could be null and is dereferenced at line 75.
+  73.           
+  74.           // Get the vocabulary entry
+  75. >         Query q = em.createQuery("select v from Vocabulary v where v.id = :id");
+  76.           q.setParameter("id", vocabulary.getId());
+  77.           Vocabulary vocabularyDb = (Vocabulary) q.getSingleResult();
+
+#74
+docs-core/src/main/java/com/sismics/docs/core/util/EncryptionUtil.java:78: error: Null Dereference
+  object returned by `getInstance().getFileService()` could be null and is dereferenced at line 78.
+  76.           }
+  77.   
+  78. >         Path tmpFile = AppContext.getInstance().getFileService().createTemporaryFile();
+  79.           try (InputStream is = Files.newInputStream(file)) {
+  80.               Files.copy(new CipherInputStream(is, getCipher(privateKey, Cipher.DECRYPT_MODE)), tmpFile, StandardCopyOption.REPLACE_EXISTING);
+
+#75
+docs-core/src/main/java/com/sismics/docs/core/dao/CommentDao.java:77: error: Null Dereference
+  object `em` last assigned on line 75 could be null and is dereferenced at line 77.
+  75.           EntityManager em = ThreadLocalContext.get().getEntityManager();
+  76.           try {
+  77. >             Query q = em.createQuery("select c from Comment c where c.id = :id and c.deleteDate is null");
+  78.               q.setParameter("id", id);
+  79.               return (Comment) q.getSingleResult();
+
+#76
+docs-core/src/main/java/com/sismics/docs/core/dao/WebhookDao.java:76: error: Null Dereference
+  object `em` last assigned on line 75 could be null and is dereferenced at line 76.
+  74.       public Webhook getActiveById(String id) {
+  75.           EntityManager em = ThreadLocalContext.get().getEntityManager();
+  76. >         Query q = em.createQuery("select w from Webhook w where w.id = :id and w.deleteDate is null");
+  77.           q.setParameter("id", id);
+  78.           try {
+
+#77
+docs-core/src/main/java/com/sismics/docs/core/util/RoutingUtil.java:94: error: Null Dereference
+  object returned by `getInstance().getMailEventBus()` could be null and is dereferenced at line 94.
+  92.               routeStepValidateEvent.setUser(userDto);
+  93.               routeStepValidateEvent.setDocument(document);
+  94. >             AppContext.getInstance().getMailEventBus().post(routeStepValidateEvent);
+  95.           }
+  96.       }
+
+#78
+docs-core/src/main/java/com/sismics/docs/core/dao/MetadataDao.java:80: error: Null Dereference
+  object `em` last assigned on line 78 could be null and is dereferenced at line 80.
+  78.           EntityManager em = ThreadLocalContext.get().getEntityManager();
+  79.           try {
+  80. >             Query q = em.createQuery("select r from Metadata r where r.id = :id and r.deleteDate is null");
+  81.               q.setParameter("id", id);
+  82.               return (Metadata) q.getSingleResult();
+
+#79
+docs-core/src/main/java/com/sismics/docs/core/dao/FileDao.java:80: error: Null Dereference
+  object `em` last assigned on line 79 could be null and is dereferenced at line 80.
+  78.       public List<File> getFiles(List<String> ids) {
+  79.           EntityManager em = ThreadLocalContext.get().getEntityManager();
+  80. >         TypedQuery<File> q = em.createQuery("select f from File f where f.id in :ids and f.deleteDate is null", File.class);
+  81.           q.setParameter("ids", ids);
+  82.           return q.getResultList();
+
+#80
+docs-core/src/main/java/com/sismics/docs/core/dao/RouteModelDao.java:83: error: Null Dereference
+  object `em` last assigned on line 81 could be null and is dereferenced at line 83.
+  81.           EntityManager em = ThreadLocalContext.get().getEntityManager();
+  82.           try {
+  83. >             Query q = em.createQuery("select r from RouteModel r where r.id = :id and r.deleteDate is null");
+  84.               q.setParameter("id", id);
+  85.               return (RouteModel) q.getSingleResult();
+
+#81
+docs-core/src/main/java/com/sismics/docs/core/dao/DocumentDao.java:98: error: Null Dereference
+  object `em` last assigned on line 89 could be null and is dereferenced at line 98.
+   96.           sb.append(" where d.DOC_ID_C = :id and d.DOC_DELETEDATE_D is null ");
+   97.   
+   98. >         Query q = em.createNativeQuery(sb.toString());
+   99.           q.setParameter("id", id);
+  100.   
+
+#82
+docs-core/src/main/java/com/sismics/docs/core/dao/AuthenticationTokenDao.java:93: error: Null Dereference
+  object `em` last assigned on line 92 could be null and is dereferenced at line 93.
+  91.   
+  92.           EntityManager em = ThreadLocalContext.get().getEntityManager();
+  93. >         Query q = em.createNativeQuery(sb.toString());
+  94.           q.setParameter("currentDate", new Date());
+  95.           q.setParameter("id", id);
+
+#83
+docs-core/src/main/java/com/sismics/docs/core/dao/GroupDao.java:91: error: Null Dereference
+  object `em` last assigned on line 88 could be null and is dereferenced at line 91.
+  89.               
+  90.           // Get the group
+  91. >         Query q = em.createQuery("select g from Group g where g.id = :id and g.deleteDate is null");
+  92.           q.setParameter("id", groupId);
+  93.           Group groupDb = (Group) q.getSingleResult();
+
+#84
+docs-core/src/main/java/com/sismics/docs/core/dao/CommentDao.java:96: error: Null Dereference
+  object `em` last assigned on line 92 could be null and is dereferenced at line 96.
+  94.           sb.append(" where c.COM_IDDOC_C = :documentId and c.COM_IDUSER_C = u.USE_ID_C and c.COM_DELETEDATE_D is null ");
+  95.           sb.append(" order by c.COM_CREATEDATE_D asc ");
+  96. >         Query q = em.createNativeQuery(sb.toString());
+  97.           q.setParameter("documentId", documentId);
+  98.           @SuppressWarnings("unchecked")
+
+#85
+docs-core/src/main/java/com/sismics/docs/core/dao/TagDao.java:98: error: Null Dereference
+  object `em` last assigned on line 96 could be null and is dereferenced at line 98.
+   96.           EntityManager em = ThreadLocalContext.get().getEntityManager();
+   97.           tag.setCreateDate(new Date());
+   98. >         em.persist(tag);
+   99.           
+  100.           // Create audit log
+
+#86
+docs-core/src/main/java/com/sismics/docs/core/dao/WebhookDao.java:98: error: Null Dereference
+  object `em` last assigned on line 96 could be null and is dereferenced at line 98.
+   96.           EntityManager em = ThreadLocalContext.get().getEntityManager();
+   97.           webhook.setCreateDate(new Date());
+   98. >         em.persist(webhook);
+   99.   
+  100.           return webhook.getId();
+
+#87
+docs-core/src/main/java/com/sismics/docs/core/util/TransactionUtil.java:92: error: Null Dereference
+  object returned by `get().getEntityManager()` could be null and is dereferenced at line 92.
+  90.        */
+  91.       public static void commit() {
+  92. >         EntityTransaction tx = ThreadLocalContext.get().getEntityManager().getTransaction();
+  93.           tx.commit();
+  94.           tx.begin();
+
+#88
+docs-core/src/main/java/com/sismics/docs/core/dao/VocabularyDao.java:96: error: Null Dereference
+  object `em` last assigned on line 93 could be null and is dereferenced at line 96.
+  94.               
+  95.           // Get the vocabulary
+  96. >         Query q = em.createQuery("select v from Vocabulary v where v.id = :id");
+  97.           q.setParameter("id", id);
+  98.           Vocabulary vocabularyDb = (Vocabulary) q.getSingleResult();
+
+#89
+docs-web/src/main/java/com/sismics/docs/rest/resource/FileResource.java:121: error: Null Dereference
+  object returned by `getInstance().getFileService()` could be null and is dereferenced at line 121.
+  119.           long fileSize;
+  120.           try {
+  121. >             unencryptedFile = AppContext.getInstance().getFileService().createTemporaryFile(name);
+  122.               Files.copy(fileBodyPart.getValueAs(InputStream.class), unencryptedFile, StandardCopyOption.REPLACE_EXISTING);
+  123.               fileSize = Files.size(unencryptedFile);
+
+#90
+docs-core/src/main/java/com/sismics/docs/core/dao/MetadataDao.java:98: error: Null Dereference
+  object `em` last assigned on line 95 could be null and is dereferenced at line 98.
+   96.   
+   97.           // Get the metadata
+   98. >         Query q = em.createQuery("select r from Metadata r where r.id = :id and r.deleteDate is null");
+   99.           q.setParameter("id", id);
+  100.           Metadata metadataDb = (Metadata) q.getSingleResult();
+
+#91
+docs-core/src/main/java/com/sismics/docs/core/dao/RouteDao.java:98: error: Null Dereference
+  object `em` last assigned on line 95 could be null and is dereferenced at line 98.
+   96.   
+   97.           // Create audit log
+   98. >         Route route = em.find(Route.class, routeId);
+   99.           AuditLogUtil.create(route, AuditLogType.DELETE, userId);
+  100.   
+
+#92
+docs-core/src/main/java/com/sismics/util/context/ThreadLocalContext.java:99: error: Null Dereference
+  object returned by `getInstance().getAsyncEventBus()` could be null and is dereferenced at line 99.
+   97.               Object asyncEvent = iterator.next();
+   98.               iterator.remove();
+   99. >             AppContext.getInstance().getAsyncEventBus().post(asyncEvent);
+  100.           }
+  101.       }
+
+#93
+docs-core/src/main/java/com/sismics/docs/core/dao/RouteModelDao.java:99: error: Null Dereference
+  object `em` last assigned on line 98 could be null and is dereferenced at line 99.
+   97.       public List<RouteModel> findAll() {
+   98.           EntityManager em = ThreadLocalContext.get().getEntityManager();
+   99. >         Query q = em.createQuery("select r from RouteModel r where r.deleteDate is null");
+  100.           return q.getResultList();
+  101.       }
+
+#94
+docs-core/src/main/java/com/sismics/docs/core/dao/UserDao.java:107: error: Null Dereference
+  object `em` last assigned on line 104 could be null and is dereferenced at line 107.
+  105.           
+  106.           // Get the user
+  107. >         Query q = em.createQuery("select u from User u where u.id = :id and u.deleteDate is null");
+  108.           q.setParameter("id", user.getId());
+  109.           User userDb = (User) q.getSingleResult();
+
+#95
+docs-core/src/main/java/com/sismics/docs/core/util/DirectoryUtil.java:105: error: Null Dereference
+  object `baseDataDir` last assigned on line 104 could be null and is dereferenced at line 105.
+  103.       private static Path getDataSubDirectory(String subdirectory) {
+  104.           Path baseDataDir = getBaseDataDirectory();
+  105. >         Path directory = baseDataDir.resolve(subdirectory);
+  106.           if (!Files.isDirectory(directory)) {
+  107.               try {
+
+#96
+docs-core/src/main/java/com/sismics/docs/core/dao/AuthenticationTokenDao.java:108: error: Null Dereference
+  object `em` last assigned on line 107 could be null and is dereferenced at line 108.
+  106.       public List<AuthenticationToken> getByUserId(String userId) {
+  107.           EntityManager em = ThreadLocalContext.get().getEntityManager();
+  108. >         Query q = em.createQuery("select a from AuthenticationToken a where a.userId = :userId");
+  109.           q.setParameter("userId", userId);
+  110.           return q.getResultList();
+
+#97
+docs-core/src/main/java/com/sismics/docs/core/dao/FileDao.java:109: error: Null Dereference
+  object `em` last assigned on line 108 could be null and is dereferenced at line 109.
+  107.       public File getFile(String id, String userId) {
+  108.           EntityManager em = ThreadLocalContext.get().getEntityManager();
+  109. >         TypedQuery<File> q = em.createQuery("select f from File f where f.id = :id and f.userId = :userId and f.deleteDate is null", File.class);
+  110.           q.setParameter("id", id);
+  111.           q.setParameter("userId", userId);
+
+#98
+docs-core/src/main/java/com/sismics/docs/core/dao/WebhookDao.java:112: error: Null Dereference
+  object `em` last assigned on line 109 could be null and is dereferenced at line 112.
+  110.   
+  111.           // Get the group
+  112. >         Query q = em.createQuery("select w from Webhook w where w.id = :id and w.deleteDate is null");
+  113.           q.setParameter("id", webhookId);
+  114.           Webhook webhookDb = (Webhook) q.getSingleResult();
+
+#99
+docs-core/src/main/java/com/sismics/docs/core/dao/RouteModelDao.java:113: error: Null Dereference
+  object `em` last assigned on line 110 could be null and is dereferenced at line 113.
+  111.   
+  112.           // Get the route model
+  113. >         Query q = em.createQuery("select r from RouteModel r where r.id = :id and r.deleteDate is null");
+  114.           q.setParameter("id", id);
+  115.           RouteModel routeModelDb = (RouteModel) q.getSingleResult();
+
+#100
+docs-core/src/main/java/com/sismics/docs/core/listener/async/FileProcessingAsyncListener.java:121: error: Null Dereference
+  object returned by `getInstance().getIndexingHandler()` could be null and is dereferenced at line 121.
+  119.               // Update index with the updated file
+  120.               if (isFileCreated) {
+  121. >                 AppContext.getInstance().getIndexingHandler().createFile(freshFile);
+  122.               } else {
+  123.                   AppContext.getInstance().getIndexingHandler().updateFile(freshFile);
+
+#101
+docs-core/src/main/java/com/sismics/docs/core/listener/async/FileProcessingAsyncListener.java:123: error: Null Dereference
+  object returned by `getInstance().getIndexingHandler()` could be null and is dereferenced at line 123.
+  121.                   AppContext.getInstance().getIndexingHandler().createFile(freshFile);
+  122.               } else {
+  123. >                 AppContext.getInstance().getIndexingHandler().updateFile(freshFile);
+  124.               }
+  125.           });
+
+#102
+docs-core/src/main/java/com/sismics/docs/core/dao/TagDao.java:116: error: Null Dereference
+  object `em` last assigned on line 113 could be null and is dereferenced at line 116.
+  114.               
+  115.           // Get the tag
+  116. >         Query q = em.createQuery("select t from Tag t where t.id = :id and t.deleteDate is null");
+  117.           q.setParameter("id", tagId);
+  118.           Tag tagDb = (Tag) q.getSingleResult();
+
+#103
+docs-core/src/main/java/com/sismics/docs/core/dao/AuthenticationTokenDao.java:120: error: Null Dereference
+  object `em` last assigned on line 119 could be null and is dereferenced at line 120.
+  118.       public void deleteByUserId(String userId, String id) {
+  119.           EntityManager em = ThreadLocalContext.get().getEntityManager();
+  120. >         Query q = em.createQuery("delete AuthenticationToken a where a.userId = :userId and a.id != :id");
+  121.           q.setParameter("userId", userId);
+  122.           q.setParameter("id", id);
+
+#104
+docs-core/src/main/java/com/sismics/docs/core/dao/GroupDao.java:130: error: Null Dereference
+  object `em` last assigned on line 129 could be null and is dereferenced at line 130.
+  128.           // Create the user group
+  129.           EntityManager em = ThreadLocalContext.get().getEntityManager();
+  130. >         em.persist(userGroup);
+  131.           
+  132.           return userGroup.getId();
+
+#105
+docs-core/src/main/java/com/sismics/docs/core/dao/FileDao.java:129: error: Null Dereference
+  object `em` last assigned on line 126 could be null and is dereferenced at line 129.
+  127.               
+  128.           // Get the file
+  129. >         TypedQuery<File> q = em.createQuery("select f from File f where f.id = :id and f.deleteDate is null", File.class);
+  130.           q.setParameter("id", id);
+  131.           File fileDb = q.getSingleResult();
+
+#106
+docs-core/src/main/java/com/sismics/docs/core/dao/AclDao.java:143: error: Null Dereference
+  object `em` last assigned on line 135 could be null and is dereferenced at line 143.
+  141.           sb.append(" and d.DOC_ID_C = :sourceId and d.DOC_DELETEDATE_D is null ");
+  142.           sb.append(" and a.ACL_TARGETID_C in (:targetIdList) and a.ACL_PERM_C = :perm and a.ACL_DELETEDATE_D is null ");
+  143. >         Query q = em.createNativeQuery(sb.toString());
+  144.           q.setParameter("sourceId", sourceId);
+  145.           q.setParameter("perm", perm.name());
+
+#107
+docs-core/src/main/java/com/sismics/docs/core/dao/UserDao.java:133: error: Null Dereference
+  object `em` last assigned on line 130 could be null and is dereferenced at line 133.
+  131.           
+  132.           // Get the user
+  133. >         Query q = em.createQuery("select u from User u where u.id = :id and u.deleteDate is null");
+  134.           q.setParameter("id", user.getId());
+  135.           User userDb = (User) q.getSingleResult();
+
+#108
+docs-core/src/main/java/com/sismics/docs/core/dao/DocumentDao.java:140: error: Null Dereference
+  object `em` last assigned on line 137 could be null and is dereferenced at line 140.
+  138.               
+  139.           // Get the document
+  140. >         TypedQuery<Document> dq = em.createQuery("select d from Document d where d.id = :id and d.deleteDate is null", Document.class);
+  141.           dq.setParameter("id", id);
+  142.           Document documentDb = dq.getSingleResult();
+
+#109
+docs-core/src/main/java/com/sismics/docs/core/dao/RouteStepDao.java:146: error: Null Dereference
+  object `em` last assigned on line 145 could be null and is dereferenced at line 146.
+  144.   
+  145.           EntityManager em = ThreadLocalContext.get().getEntityManager();
+  146. >         Query q = em.createNativeQuery(sb.toString());
+  147.           q.setParameter("endDate", new Date());
+  148.           q.setParameter("transition", transition.name());
+
+#110
+docs-core/src/main/java/com/sismics/docs/core/dao/GroupDao.java:145: error: Null Dereference
+  object `em` last assigned on line 142 could be null and is dereferenced at line 145.
+  143.               
+  144.           // Get the user group
+  145. >         Query q = em.createQuery("select ug from UserGroup ug where ug.groupId = :groupId and ug.userId = :userId and ug.deleteDate is null");
+  146.           q.setParameter("groupId", groupId);
+  147.           q.setParameter("userId", userId);
+
+#111
+docs-web/src/main/java/com/sismics/docs/rest/resource/UserResource.java:165: error: Null Dereference
+  object `user.password` last assigned on line 164 could be null and is dereferenced by call to `updatePassword(...)` at line 165.
+  163.           if (StringUtils.isNotBlank(password)) {
+  164.               user.setPassword(password);
+  165. >             userDao.updatePassword(user, principal.getId());
+  166.           }
+  167.           
+
+#112
+docs-core/src/main/java/com/sismics/docs/core/dao/FileDao.java:151: error: Null Dereference
+  object `em` last assigned on line 148 could be null and is dereferenced at line 151.
+  149.           
+  150.           // Get the file
+  151. >         TypedQuery<File> q = em.createQuery("select f from File f where f.id = :id and f.deleteDate is null", File.class);
+  152.           q.setParameter("id", file.getId());
+  153.           File fileDb = q.getSingleResult();
+
+#113
+docs-core/src/main/java/com/sismics/docs/core/dao/UserDao.java:152: error: Null Dereference
+  object `em` last assigned on line 149 could be null and is dereferenced at line 152.
+  150.           
+  151.           // Get the user
+  152. >         Query q = em.createQuery("select u from User u where u.id = :id and u.deleteDate is null");
+  153.           q.setParameter("id", user.getId());
+  154.           User userDb = (User) q.getSingleResult();
+
+#114
+docs-core/src/main/java/com/sismics/docs/core/dao/TagDao.java:154: error: Null Dereference
+  object `em` last assigned on line 151 could be null and is dereferenced at line 154.
+  152.           
+  153.           // Get the tag
+  154. >         Query q = em.createQuery("select t from Tag t where t.id = :id and t.deleteDate is null");
+  155.           q.setParameter("id", tag.getId());
+  156.           Tag tagDb = (Tag) q.getSingleResult();
+
+#115
+docs-core/src/main/java/com/sismics/docs/core/dao/AclDao.java:166: error: Null Dereference
+  object `em` last assigned on line 163 could be null and is dereferenced at line 166.
+  164.   
+  165.           // Create audit log
+  166. >         Query q = em.createQuery("from Acl a where a.sourceId = :sourceId and a.perm = :perm and a.targetId = :targetId and a.type = :type and a.deleteDate is null");
+  167.           q.setParameter("sourceId", sourceId);
+  168.           q.setParameter("perm", perm);
+
+#116
+docs-core/src/main/java/com/sismics/docs/core/dao/UserDao.java:175: error: Null Dereference
+  object `em` last assigned on line 172 could be null and is dereferenced at line 175.
+  173.   
+  174.           // Get the user
+  175. >         Query q = em.createQuery("select u from User u where u.id = :id and u.deleteDate is null");
+  176.           q.setParameter("id", user.getId());
+  177.           User userDb = (User) q.getSingleResult();
+
+#117
+docs-core/src/main/java/com/sismics/docs/core/dao/FileDao.java:175: error: Null Dereference
+  object `em` last assigned on line 174 could be null and is dereferenced at line 175.
+  173.       public File getActiveById(String id) {
+  174.           EntityManager em = ThreadLocalContext.get().getEntityManager();
+  175. >         TypedQuery<File> q = em.createQuery("select f from File f where f.id = :id and f.deleteDate is null", File.class);
+  176.           q.setParameter("id", id);
+  177.           try {
+
+#118
+docs-core/src/main/java/com/sismics/docs/core/dao/DocumentDao.java:181: error: Null Dereference
+  object `em` last assigned on line 180 could be null and is dereferenced at line 181.
+  179.       public Document getById(String id) {
+  180.           EntityManager em = ThreadLocalContext.get().getEntityManager();
+  181. >         TypedQuery<Document> q = em.createQuery("select d from Document d where d.id = :id and d.deleteDate is null", Document.class);
+  182.           q.setParameter("id", id);
+  183.           try {
+
+#119
+docs-core/src/main/java/com/sismics/docs/core/dao/FileDao.java:194: error: Null Dereference
+  object `em` last assigned on line 192 could be null and is dereferenced at line 194.
+  192.           EntityManager em = ThreadLocalContext.get().getEntityManager();
+  193.           if (documentId == null) {
+  194. >             TypedQuery<File> q = em.createQuery("select f from File f where f.documentId is null and f.deleteDate is null and f.latestVersion = true and f.userId = :userId order by f.createDate asc", File.class);
+  195.               q.setParameter("userId", userId);
+  196.               return q.getResultList();
+
+#120
+docs-core/src/main/java/com/sismics/docs/core/dao/UserDao.java:195: error: Null Dereference
+  object `em` last assigned on line 192 could be null and is dereferenced at line 195.
+  193.   
+  194.           // Get the user
+  195. >         Query q = em.createQuery("select u from User u where u.id = :id and u.deleteDate is null");
+  196.           q.setParameter("id", user.getId());
+  197.           User userDb = (User) q.getSingleResult();
+
+#121
+docs-core/src/main/java/com/sismics/util/EmailUtil.java:205: error: Null Dereference
+  object returned by `getInstance().getFileService()` could be null and is dereferenced at line 205.
+  203.                       FileContent fileContent = new FileContent();
+  204.                       fileContent.name = subPart.getFileName();
+  205. >                     fileContent.file = AppContext.getInstance().getFileService().createTemporaryFile();
+  206.                       Files.copy(subPart.getInputStream(), fileContent.file, StandardCopyOption.REPLACE_EXISTING);
+  207.                       fileContent.size = Files.size(fileContent.file);
+
+#122
+docs-core/src/main/java/com/sismics/docs/core/dao/DocumentDao.java:201: error: Null Dereference
+  object `em` last assigned on line 198 could be null and is dereferenced at line 201.
+  199.   
+  200.           // Get the document
+  201. >         TypedQuery<Document> q = em.createQuery("select d from Document d where d.id = :id and d.deleteDate is null", Document.class);
+  202.           q.setParameter("id", document.getId());
+  203.           Document documentDb = q.getSingleResult();
+
+#123
+docs-core/src/main/java/com/sismics/docs/core/dao/FileDao.java:210: error: Null Dereference
+  object `em` last assigned on line 209 could be null and is dereferenced at line 210.
+  208.       public List<File> getByDocumentsIds(Iterable<String> documentIds) {
+  209.           EntityManager em = ThreadLocalContext.get().getEntityManager();
+  210. >         TypedQuery<File> q = em.createQuery("select f from File f where f.documentId in :documentIds and f.latestVersion = true and f.deleteDate is null order by f.order asc", File.class);
+  211.           q.setParameter("documentIds", documentIds);
+  212.           return q.getResultList();
+
+#124
+docs-core/src/main/java/com/sismics/docs/core/dao/UserDao.java:214: error: Null Dereference
+  object `em` last assigned on line 212 could be null and is dereferenced at line 214.
+  212.           EntityManager em = ThreadLocalContext.get().getEntityManager();
+  213.           try {
+  214. >             return em.find(User.class, id);
+  215.           } catch (NoResultException e) {
+  216.               return null;
+
+#125
+docs-core/src/main/java/com/sismics/docs/core/dao/FileDao.java:223: error: Null Dereference
+  object `em` last assigned on line 222 could be null and is dereferenced at line 223.
+  221.       public List<File> getByVersionId(String versionId) {
+  222.           EntityManager em = ThreadLocalContext.get().getEntityManager();
+  223. >         TypedQuery<File> q = em.createQuery("select f from File f where f.versionId = :versionId and f.deleteDate is null order by f.order asc", File.class);
+  224.           q.setParameter("versionId", versionId);
+  225.           return q.getResultList();
+
+#126
+docs-web/src/test/java/com/sismics/docs/rest/TestAppResource.java:296: error: Null Dereference
+  object returned by `getInstance().getInboxService()` could be null and is dereferenced at line 296.
+  294.   
+  295.           // Trigger an inbox sync
+  296. >         AppContext.getInstance().getInboxService().syncInbox();
+  297.   
+  298.           // Search for added documents
+
+#127
+docs-core/src/main/java/com/sismics/docs/core/dao/UserDao.java:229: error: Null Dereference
+  object `em` last assigned on line 227 could be null and is dereferenced at line 229.
+  227.           EntityManager em = ThreadLocalContext.get().getEntityManager();
+  228.           try {
+  229. >             Query q = em.createQuery("select u from User u where u.username = :username and u.deleteDate is null");
+  230.               q.setParameter("username", username);
+  231.               return (User) q.getSingleResult();
+
+#128
+docs-core/src/main/java/com/sismics/docs/core/dao/DocumentDao.java:234: error: Null Dereference
+  object `em` last assigned on line 233 could be null and is dereferenced at line 234.
+  232.       public void updateFileId(Document document) {
+  233.           EntityManager em = ThreadLocalContext.get().getEntityManager();
+  234. >         Query query = em.createNativeQuery("update T_DOCUMENT d set DOC_IDFILE_C = :fileId, DOC_UPDATEDATE_D = :updateDate where d.DOC_ID_C = :id");
+  235.           query.setParameter("updateDate", new Date());
+  236.           query.setParameter("fileId", document.getFileId());
+
+#129
+docs-core/src/main/java/com/sismics/docs/core/dao/UserDao.java:247: error: Null Dereference
+  object `em` last assigned on line 244 could be null and is dereferenced at line 247.
+  245.               
+  246.           // Get the user
+  247. >         Query q = em.createQuery("select u from User u where u.username = :username and u.deleteDate is null");
+  248.           q.setParameter("username", username);
+  249.           User userDb = (User) q.getSingleResult();
+
+#130
+docs-core/src/main/java/com/sismics/docs/core/dao/DocumentDao.java:248: error: Null Dereference
+  object `em` last assigned on line 247 could be null and is dereferenced at line 248.
+  246.       public long getDocumentCount() {
+  247.           EntityManager em = ThreadLocalContext.get().getEntityManager();
+  248. >         Query query = em.createNativeQuery("select count(d.DOC_ID_C) from T_DOCUMENT d where d.DOC_DELETEDATE_D is null");
+  249.           return ((Number) query.getSingleResult()).longValue();
+  250.       }
+
+#131
+docs-core/src/main/java/com/sismics/docs/core/dao/GroupDao.java:257: error: Null Dereference
+  object `em` last assigned on line 254 could be null and is dereferenced at line 257.
+  255.           
+  256.           // Get the group
+  257. >         Query q = em.createQuery("select g from Group g where g.id = :id and g.deleteDate is null");
+  258.           q.setParameter("id", group.getId());
+  259.           Group groupDb = (Group) q.getSingleResult();
+
+#132
+docs-web/src/main/java/com/sismics/docs/rest/resource/AppResource.java:380: error: Null Dereference
+  object `inboxService` last assigned on line 378 could be null and is dereferenced at line 380.
+  378.           InboxService inboxService = AppContext.getInstance().getInboxService();
+  379.           JsonObjectBuilder lastSync = Json.createObjectBuilder();
+  380. >         if (inboxService.getLastSyncDate() == null) {
+  381.               lastSync.addNull("date");
+  382.           } else {
+
+#133
+docs-core/src/main/java/com/sismics/docs/core/dao/UserDao.java:379: error: Null Dereference
+  object `em` last assigned on line 378 could be null and is dereferenced at line 379.
+  377.       public long getGlobalStorageCurrent() {
+  378.           EntityManager em = ThreadLocalContext.get().getEntityManager();
+  379. >         Query query = em.createNativeQuery("select sum(u.USE_STORAGECURRENT_N) from T_USER u where u.USE_DELETEDATE_D is null");
+  380.           return ((Number) query.getSingleResult()).longValue();
+  381.       }
+
+#134
+docs-core/src/main/java/com/sismics/docs/core/dao/UserDao.java:390: error: Null Dereference
+  object `em` last assigned on line 389 could be null and is dereferenced at line 390.
+  388.       public long getActiveUserCount() {
+  389.           EntityManager em = ThreadLocalContext.get().getEntityManager();
+  390. >         Query query = em.createNativeQuery("select count(u.USE_ID_C) from T_USER u where u.USE_DELETEDATE_D is null and (u.USE_DISABLEDATE_D is null or u.USE_DISABLEDATE_D >= :fromDate and u.USE_DISABLEDATE_D < :toDate)");
+  391.           DateTime fromDate = DateTime.now().minusMonths(1).dayOfMonth().withMinimumValue().withTimeAtStartOfDay();
+  392.           DateTime toDate = fromDate.plusMonths(1);
+
+#135
+docs-web/src/test/java/com/sismics/docs/rest/TestUserResource.java:457: error: Null Dereference
+  object `emailBody` last assigned on line 455 could be null and is dereferenced at line 457.
+  455.           String emailBody = popEmail();
+  456.           Assert.assertNotNull("No email to consume", emailBody);
+  457. >         Assert.assertTrue(emailBody.contains("Please reset your password"));
+  458.           Pattern keyPattern = Pattern.compile("/passwordreset/(.+?)\"");
+  459.           Matcher keyMatcher = keyPattern.matcher(emailBody);
+
+#136
+docs-web/src/main/java/com/sismics/docs/rest/resource/AppResource.java:492: error: Null Dereference
+  object returned by `getInstance().getInboxService()` could be null and is dereferenced at line 492.
+  490.   
+  491.           return Response.ok().entity(Json.createObjectBuilder()
+  492. >                 .add("count", AppContext.getInstance().getInboxService().testInbox())
+  493.                   .build()).build();
+  494.       }
+
+#137
+docs-web/src/main/java/com/sismics/docs/rest/resource/AppResource.java:555: error: Null Dereference
+  object returned by `paginatedList.getResultList()` could be null and is dereferenced at line 555.
+  553.           memoryAppender.find(logCriteria, paginatedList);
+  554.           JsonArrayBuilder logs = Json.createArrayBuilder();
+  555. >         for (LogEntry logEntry : paginatedList.getResultList()) {
+  556.               logs.add(Json.createObjectBuilder()
+  557.                       .add("date", logEntry.getTimestamp())
+
+#138
+docs-web/src/main/java/com/sismics/docs/rest/resource/AppResource.java:657: error: Null Dereference
+  object `em` last assigned on line 647 could be null and is dereferenced at line 657.
+  655.           sb.append(" left join T_GROUP g on g.GRP_ID_C = al.LOG_IDENTITY_C and g.GRP_DELETEDATE_D is null ");
+  656.           sb.append(" where d.DOC_ID_C is null and a.ACL_ID_C is null and c.COM_ID_C is null and f.FIL_ID_C is null and t.TAG_ID_C is null and u.USE_ID_C is null and g.GRP_ID_C is null)");
+  657. >         Query q = em.createNativeQuery(sb.toString());
+  658.           log.info("Deleting {} orphan audit logs", q.executeUpdate());
+  659.           
+
+#139
+docs-web/src/main/java/com/sismics/docs/rest/resource/DocumentResource.java:971: error: Null Dereference
+  object returned by `getInstance().getFileService()` could be null and is dereferenced at line 971.
+  969.           java.nio.file.Path unencryptedFile;
+  970.           try {
+  971. >             unencryptedFile = AppContext.getInstance().getFileService().createTemporaryFile();
+  972.               Files.copy(fileBodyPart.getValueAs(InputStream.class), unencryptedFile, StandardCopyOption.REPLACE_EXISTING);
+  973.           } catch (IOException e) {
+
+#140
+docs-web/src/main/java/com/sismics/docs/rest/resource/UserResource.java:1102: error: Null Dereference
+  object returned by `getInstance().getMailEventBus()` could be null and is dereferenced at line 1102.
+  1100.           passwordLostEvent.setUser(user);
+  1101.           passwordLostEvent.setPasswordRecovery(passwordRecovery);
+  1102. >         AppContext.getInstance().getMailEventBus().post(passwordLostEvent);
+  1103.   
+  1104.           // Always return OK
+
+#141
+docs-core/src/main/java/com/sismics/util/ResourceBundleModel.java:141: warning: Thread Safety Violation
+  Unprotected write. Non-private method `ResourceBundleModel.exec(...)` indirectly writes to field `this.formats` outside of synchronization.
+ Reporting because another access to the same memory occurs on a background thread, although this access may not.
+
+#142
+docs-core/src/main/java/com/sismics/util/ResourceBundleModel.java:162: warning: Thread Safety Violation
+  Unprotected write. Non-private method `ResourceBundleModel.format(...)` writes to field `this.formats` outside of synchronization.
+ Reporting because this access may occur on a background thread.
+
+#143
+docs-core/src/main/java/com/sismics/util/ResourceBundleModel.java:161: warning: Thread Safety Violation
+  Read/Write race. Non-private method `ResourceBundleModel.format(...)` reads without synchronization from `this.formats`. Potentially races with write in method `ResourceBundleModel.exec(...)`.
+ Reporting because this access may occur on a background thread.
+
+#144
+docs-core/src/main/java/com/sismics/util/totp/ReseedingSecureRandom.java:111: warning: Thread Safety Violation
+  Read/Write race. Non-private method `ReseedingSecureRandom.nextBytes(...)` reads without synchronization from `this.secureRandom`. Potentially races with write in method `ReseedingSecureRandom.nextBytes(...)`.
+ Reporting because this access may occur on a background thread.
+  109.           }
+  110.   
+  111. >         this.secureRandom.nextBytes(bytes);
+  112.       }
+  113.   }
+
+Found 145 issues
+                        Issue Type(ISSUED_TYPE_ID): #
+                Null Dereference(NULL_DEREFERENCE): 141
+  Thread Safety Violation(THREAD_SAFETY_VIOLATION): 4
