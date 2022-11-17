@@ -39,6 +39,11 @@ jobs:
           echo "coverage = ${{ steps.jacoco.outputs.coverage }}"
           echo "branch coverage = ${{ steps.jacoco.outputs.branches }}"
       
+      - name: PITEST Mutation Testing
+        run: |
+          cd docs-core
+          mvn test-compile org.pitest:pitest-maven:mutationCoverage
+      
       - name: Commit badge
         run: |
           mkdir tmp
