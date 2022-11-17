@@ -1,3 +1,17 @@
+# Quality Assurance Tools and Integration into Maven CI
+
+## Dynamic Testing: PITEST Mutation Testing
+
+PITEST is integrated into Maven CI by inputting PITEST into the `pom.xml` as a plug-in. Please see results for docs-core below:
+
+<h3 align="center">
+  <img src="PITTEST_docs-core.png" alt="PITEST_Results" width=500 />
+</h3>
+
+160 classes from Docs-Core was tested, with a mutation coverage of 14%.
+
+– – – – -
+
 <h3 align="center">
   <img src="https://teedy.io/img/github-title.png" alt="Teedy" width=500 />
 </h3>
