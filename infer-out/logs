@@ -1,0 +1,814 @@
+[2678][      debug] Loading models took 45.968ms
+[2684][      debug] Sqlite write daemon: starting up
+[2684][      debug] Sqlite write daemon: set up complete, waiting for connections
+[2678][environment] CWD = /Users/gracexin/fall-22-hw5-team-otters
+[2678][environment] No .inferconfig file found
+[2678][environment] Project root = /Users/gracexin/fall-22-hw5-team-otters
+[2678][environment] INFER_ARGS =   @/var/folders/9w/664slfr14jz7b5d04cvjplgc0000gn/T/args.tmp.02f487
+[2678][environment] command line arguments:   infer run --keep-going -- mvn clean -DskipTests
+[2678][environment]                           install
+[2678][environment] Could not retrieve available memory (possibly not on Linux)
+[2678][environment] Active checkers: self-in-block (C/C++/ObjC), starvation (C/C++/ObjC, Java), uninit (C/C++/ObjC), siof (C/C++/ObjC), dotnet-resource-leak (C#/.Net), racerd (C/C++/ObjC, Java), liveness (C/C++/ObjC), inefficient-keyset-iterator (Java), fragment-retains-view (Java), biabduction (C/C++/ObjC, Java, C#/.Net)
+[2678][environment] Scheduler: file
+[2678][environment] Cores used: 4
+[2678][environment] Infer version v1.1.0
+[2678][environment] Copyright 2009 - present Facebook. All Rights Reserved.
+[2678][environment] 
+[2678][   progress] Capturing in maven mode...
+[2678][      debug] Adding maven module /Users/gracexin/fall-22-hw5-team-otters/docs-core
+[2678][      debug] Adding maven module /Users/gracexin/fall-22-hw5-team-otters/docs-web-common
+[2678][      debug] Adding maven module /Users/gracexin/fall-22-hw5-team-otters/docs-web
+[2678][      debug] Running maven capture:
+[2678][      debug] mvn 'clean' '-DskipTests' 'install' '-P' 'infer-capture'
+
+[2733][environment] CWD = /Users/gracexin/fall-22-hw5-team-otters/docs-core
+[2733][environment] No .inferconfig file found
+[2733][environment] Project root = /Users/gracexin/fall-22-hw5-team-otters
+[2733][environment] INFER_ARGS =   @/var/folders/9w/664slfr14jz7b5d04cvjplgc0000gn/T/args.tmp.011be2
+[2733][environment] command line arguments:   /usr/local/Cellar/infer/1.1.0_1/lib/infer/infer/bin/infer
+[2733][environment]                           @/private/var/folders/9w/664slfr14jz7b5d04cvjplgc0000gn/T/org.codehaus.plexus.compiler.javac.JavacCompiler6339982169460836511arguments
+[2733][environment] Could not retrieve available memory (possibly not on Linux)
+[2733][environment] Active checkers: self-in-block (C/C++/ObjC), starvation (C/C++/ObjC, Java), uninit (C/C++/ObjC), siof (C/C++/ObjC), dotnet-resource-leak (C#/.Net), racerd (C/C++/ObjC, Java), liveness (C/C++/ObjC), inefficient-keyset-iterator (Java), fragment-retains-view (Java), biabduction (C/C++/ObjC, Java, C#/.Net)
+[2733][      debug] Current working directory: '/Users/gracexin/fall-22-hw5-team-otters/docs-core'
+[2733][      debug] Trying to execute: javac '-J-Duser.language=en' '@/private/var/folders/9w/664slfr14jz7b5d04cvjplgc0000gn/T/org.codehaus.plexus.compiler.javac.JavacCompiler6339982169460836511arguments' '@/Users/gracexin/fall-22-hw5-team-otters/infer-out/tmp/javac_args.tmp.1b2fbf' 2>'/Users/gracexin/fall-22-hw5-team-otters/infer-out/tmp/javac.tmp.31c4db.out'
+[2733][      debug] *** Success. Logs:
+[2733][      debug] Translating 184 source files (198 classes)
+[2733][      debug] done capturing all files
+[2733][      debug] GC stats for capture:
+[2733][      debug]   minor_words: 2.41267e+08
+[2733][      debug]   promoted_words: 2.27207e+07
+[2733][      debug]   major_words: 3.74097e+07
+[2733][      debug]   minor_collections: 664
+[2733][      debug]   major_collections: 23
+[2733][      debug]   compactions: 0
+[2733][      debug]   top_heap_words: 21820416
+[2733][      debug]   
+[2733][      debug] GC stats for main_process_full:
+[2733][      debug]   minor_words: 2.4283e+08
+[2733][      debug]   promoted_words: 2.28797e+07
+[2733][      debug]   major_words: 3.75928e+07
+[2733][      debug]   minor_collections: 668
+[2733][      debug]   major_collections: 25
+[2733][      debug]   compactions: 1
+[2733][      debug]   top_heap_words: 21820416
+[2733][      debug]   
+[2733][environment] Scheduler: file
+[2733][environment] Cores used: 4
+[2733][environment] 
+[2796][environment] CWD = /Users/gracexin/fall-22-hw5-team-otters/docs-core
+[2796][environment] No .inferconfig file found
+[2796][environment] Project root = /Users/gracexin/fall-22-hw5-team-otters
+[2796][environment] INFER_ARGS =   @/var/folders/9w/664slfr14jz7b5d04cvjplgc0000gn/T/args.tmp.9f04d0
+[2796][environment] command line arguments:   /usr/local/Cellar/infer/1.1.0_1/lib/infer/infer/bin/infer
+[2796][environment]                           @/private/var/folders/9w/664slfr14jz7b5d04cvjplgc0000gn/T/org.codehaus.plexus.compiler.javac.JavacCompiler1610679743175770790arguments
+[2796][environment] Could not retrieve available memory (possibly not on Linux)
+[2796][environment] Active checkers: self-in-block (C/C++/ObjC), starvation (C/C++/ObjC, Java), uninit (C/C++/ObjC), siof (C/C++/ObjC), dotnet-resource-leak (C#/.Net), racerd (C/C++/ObjC, Java), liveness (C/C++/ObjC), inefficient-keyset-iterator (Java), fragment-retains-view (Java), biabduction (C/C++/ObjC, Java, C#/.Net)
+[2796][      debug] Current working directory: '/Users/gracexin/fall-22-hw5-team-otters/docs-core'
+[2796][      debug] Trying to execute: javac '-J-Duser.language=en' '@/private/var/folders/9w/664slfr14jz7b5d04cvjplgc0000gn/T/org.codehaus.plexus.compiler.javac.JavacCompiler1610679743175770790arguments' '@/Users/gracexin/fall-22-hw5-team-otters/infer-out/tmp/javac_args.tmp.3a80ff' 2>'/Users/gracexin/fall-22-hw5-team-otters/infer-out/tmp/javac.tmp.e70d58.out'
+[2796][      debug] *** Success. Logs:
+[2796][      debug] Translating 10 source files (10 classes)
+[2796][      debug] done capturing all files
+[2796][      debug] GC stats for capture:
+[2796][      debug]   minor_words: 1.54445e+07
+[2796][      debug]   promoted_words: 4.00955e+06
+[2796][      debug]   major_words: 5.53022e+06
+[2796][      debug]   minor_collections: 21
+[2796][      debug]   major_collections: 3
+[2796][      debug]   compactions: 0
+[2796][      debug]   top_heap_words: 6197248
+[2796][      debug]   
+[2796][      debug] GC stats for main_process_full:
+[2796][      debug]   minor_words: 1.6998e+07
+[2796][      debug]   promoted_words: 4.16856e+06
+[2796][      debug]   major_words: 5.71335e+06
+[2796][      debug]   minor_collections: 25
+[2796][      debug]   major_collections: 5
+[2796][      debug]   compactions: 1
+[2796][      debug]   top_heap_words: 6197248
+[2796][      debug]   
+[2796][environment] Scheduler: file
+[2796][environment] Cores used: 4
+[2796][environment] 
+[2808][environment] CWD = /Users/gracexin/fall-22-hw5-team-otters/docs-web-common
+[2808][environment] No .inferconfig file found
+[2808][environment] Project root = /Users/gracexin/fall-22-hw5-team-otters
+[2808][environment] INFER_ARGS =   @/var/folders/9w/664slfr14jz7b5d04cvjplgc0000gn/T/args.tmp.3df0f4
+[2808][environment] command line arguments:   /usr/local/Cellar/infer/1.1.0_1/lib/infer/infer/bin/infer
+[2808][environment]                           @/private/var/folders/9w/664slfr14jz7b5d04cvjplgc0000gn/T/org.codehaus.plexus.compiler.javac.JavacCompiler8758754102729191839arguments
+[2808][environment] Could not retrieve available memory (possibly not on Linux)
+[2808][environment] Active checkers: self-in-block (C/C++/ObjC), starvation (C/C++/ObjC, Java), uninit (C/C++/ObjC), siof (C/C++/ObjC), dotnet-resource-leak (C#/.Net), racerd (C/C++/ObjC, Java), liveness (C/C++/ObjC), inefficient-keyset-iterator (Java), fragment-retains-view (Java), biabduction (C/C++/ObjC, Java, C#/.Net)
+[2808][      debug] Current working directory: '/Users/gracexin/fall-22-hw5-team-otters/docs-web-common'
+[2808][      debug] Trying to execute: javac '-J-Duser.language=en' '@/private/var/folders/9w/664slfr14jz7b5d04cvjplgc0000gn/T/org.codehaus.plexus.compiler.javac.JavacCompiler8758754102729191839arguments' '@/Users/gracexin/fall-22-hw5-team-otters/infer-out/tmp/javac_args.tmp.fb0e14' 2>'/Users/gracexin/fall-22-hw5-team-otters/infer-out/tmp/javac.tmp.6629ce.out'
+[2808][      debug] *** Success. Logs:
+[2808][      debug] Translating 14 source files (14 classes)
+[2808][      debug] done capturing all files
+[2808][      debug] GC stats for capture:
+[2808][      debug]   minor_words: 2.12483e+07
+[2808][      debug]   promoted_words: 4.70156e+06
+[2808][      debug]   major_words: 6.51564e+06
+[2808][      debug]   minor_collections: 31
+[2808][      debug]   major_collections: 5
+[2808][      debug]   compactions: 0
+[2808][      debug]   top_heap_words: 7135232
+[2808][      debug]   
+[2808][      debug] GC stats for main_process_full:
+[2808][      debug]   minor_words: 2.28021e+07
+[2808][      debug]   promoted_words: 4.86058e+06
+[2808][      debug]   major_words: 6.69925e+06
+[2808][      debug]   minor_collections: 35
+[2808][      debug]   major_collections: 7
+[2808][      debug]   compactions: 1
+[2808][      debug]   top_heap_words: 7135232
+[2808][      debug]   
+[2808][environment] Scheduler: file
+[2808][environment] Cores used: 4
+[2808][environment] 
+[2825][environment] CWD = /Users/gracexin/fall-22-hw5-team-otters/docs-web-common
+[2825][environment] No .inferconfig file found
+[2825][environment] Project root = /Users/gracexin/fall-22-hw5-team-otters
+[2825][environment] INFER_ARGS =   @/var/folders/9w/664slfr14jz7b5d04cvjplgc0000gn/T/args.tmp.8ea186
+[2825][environment] command line arguments:   /usr/local/Cellar/infer/1.1.0_1/lib/infer/infer/bin/infer
+[2825][environment]                           @/private/var/folders/9w/664slfr14jz7b5d04cvjplgc0000gn/T/org.codehaus.plexus.compiler.javac.JavacCompiler10109103025462438215arguments
+[2825][environment] Could not retrieve available memory (possibly not on Linux)
+[2825][environment] Active checkers: self-in-block (C/C++/ObjC), starvation (C/C++/ObjC, Java), uninit (C/C++/ObjC), siof (C/C++/ObjC), dotnet-resource-leak (C#/.Net), racerd (C/C++/ObjC, Java), liveness (C/C++/ObjC), inefficient-keyset-iterator (Java), fragment-retains-view (Java), biabduction (C/C++/ObjC, Java, C#/.Net)
+[2825][      debug] Current working directory: '/Users/gracexin/fall-22-hw5-team-otters/docs-web-common'
+[2825][      debug] Trying to execute: javac '-J-Duser.language=en' '@/private/var/folders/9w/664slfr14jz7b5d04cvjplgc0000gn/T/org.codehaus.plexus.compiler.javac.JavacCompiler10109103025462438215arguments' '@/Users/gracexin/fall-22-hw5-team-otters/infer-out/tmp/javac_args.tmp.0020e4' 2>'/Users/gracexin/fall-22-hw5-team-otters/infer-out/tmp/javac.tmp.4a30fd.out'
+[2825][      debug] *** Success. Logs:
+[2825][      debug] Translating 3 source files (3 classes)
+[2825][      debug] done capturing all files
+[2825][      debug] GC stats for capture:
+[2825][      debug]   minor_words: 2.05252e+07
+[2825][      debug]   promoted_words: 4.7596e+06
+[2825][      debug]   major_words: 6.77698e+06
+[2825][      debug]   minor_collections: 31
+[2825][      debug]   major_collections: 5
+[2825][      debug]   compactions: 0
+[2825][      debug]   top_heap_words: 6872064
+[2825][      debug]   
+[2825][      debug] GC stats for main_process_full:
+[2825][      debug]   minor_words: 2.20784e+07
+[2825][      debug]   promoted_words: 4.91862e+06
+[2825][      debug]   major_words: 6.96115e+06
+[2825][      debug]   minor_collections: 35
+[2825][      debug]   major_collections: 7
+[2825][      debug]   compactions: 1
+[2825][      debug]   top_heap_words: 6872064
+[2825][      debug]   
+[2825][environment] Scheduler: file
+[2825][environment] Cores used: 4
+[2825][environment] 
+[2837][environment] CWD = /Users/gracexin/fall-22-hw5-team-otters/docs-web
+[2837][environment] No .inferconfig file found
+[2837][environment] Project root = /Users/gracexin/fall-22-hw5-team-otters
+[2837][environment] INFER_ARGS =   @/var/folders/9w/664slfr14jz7b5d04cvjplgc0000gn/T/args.tmp.f31cc1
+[2837][environment] command line arguments:   /usr/local/Cellar/infer/1.1.0_1/lib/infer/infer/bin/infer
+[2837][environment]                           @/private/var/folders/9w/664slfr14jz7b5d04cvjplgc0000gn/T/org.codehaus.plexus.compiler.javac.JavacCompiler12353027051884893304arguments
+[2837][environment] Could not retrieve available memory (possibly not on Linux)
+[2837][environment] Active checkers: self-in-block (C/C++/ObjC), starvation (C/C++/ObjC, Java), uninit (C/C++/ObjC), siof (C/C++/ObjC), dotnet-resource-leak (C#/.Net), racerd (C/C++/ObjC, Java), liveness (C/C++/ObjC), inefficient-keyset-iterator (Java), fragment-retains-view (Java), biabduction (C/C++/ObjC, Java, C#/.Net)
+[2837][      debug] Current working directory: '/Users/gracexin/fall-22-hw5-team-otters/docs-web'
+[2837][      debug] Trying to execute: javac '-J-Duser.language=en' '@/private/var/folders/9w/664slfr14jz7b5d04cvjplgc0000gn/T/org.codehaus.plexus.compiler.javac.JavacCompiler12353027051884893304arguments' '@/Users/gracexin/fall-22-hw5-team-otters/infer-out/tmp/javac_args.tmp.9edce7' 2>'/Users/gracexin/fall-22-hw5-team-otters/infer-out/tmp/javac.tmp.f04682.out'
+[2837][      debug] *** Success. Logs:
+[2837][      debug] Translating 19 source files (21 classes)
+[2837][      debug] done capturing all files
+[2837][      debug] GC stats for capture:
+[2837][      debug]   minor_words: 5.32042e+07
+[2837][      debug]   promoted_words: 6.7192e+06
+[2837][      debug]   major_words: 9.36434e+06
+[2837][      debug]   minor_collections: 110
+[2837][      debug]   major_collections: 6
+[2837][      debug]   compactions: 0
+[2837][      debug]   top_heap_words: 9180160
+[2837][      debug]   
+[2837][      debug] GC stats for main_process_full:
+[2837][      debug]   minor_words: 5.47582e+07
+[2837][      debug]   promoted_words: 6.87821e+06
+[2837][      debug]   major_words: 9.54816e+06
+[2837][      debug]   minor_collections: 114
+[2837][      debug]   major_collections: 8
+[2837][      debug]   compactions: 1
+[2837][      debug]   top_heap_words: 9180160
+[2837][      debug]   
+[2837][environment] Scheduler: file
+[2837][environment] Cores used: 4
+[2837][environment] 
+[2852][environment] CWD = /Users/gracexin/fall-22-hw5-team-otters/docs-web
+[2852][environment] No .inferconfig file found
+[2852][environment] Project root = /Users/gracexin/fall-22-hw5-team-otters
+[2852][environment] INFER_ARGS =   @/var/folders/9w/664slfr14jz7b5d04cvjplgc0000gn/T/args.tmp.bc9d05
+[2852][environment] command line arguments:   /usr/local/Cellar/infer/1.1.0_1/lib/infer/infer/bin/infer
+[2852][environment]                           @/private/var/folders/9w/664slfr14jz7b5d04cvjplgc0000gn/T/org.codehaus.plexus.compiler.javac.JavacCompiler16108080729487605785arguments
+[2852][environment] Could not retrieve available memory (possibly not on Linux)
+[2852][environment] Active checkers: self-in-block (C/C++/ObjC), starvation (C/C++/ObjC, Java), uninit (C/C++/ObjC), siof (C/C++/ObjC), dotnet-resource-leak (C#/.Net), racerd (C/C++/ObjC, Java), liveness (C/C++/ObjC), inefficient-keyset-iterator (Java), fragment-retains-view (Java), biabduction (C/C++/ObjC, Java, C#/.Net)
+[2852][      debug] Current working directory: '/Users/gracexin/fall-22-hw5-team-otters/docs-web'
+[2852][      debug] Trying to execute: javac '-J-Duser.language=en' '@/private/var/folders/9w/664slfr14jz7b5d04cvjplgc0000gn/T/org.codehaus.plexus.compiler.javac.JavacCompiler16108080729487605785arguments' '@/Users/gracexin/fall-22-hw5-team-otters/infer-out/tmp/javac_args.tmp.0f75be' 2>'/Users/gracexin/fall-22-hw5-team-otters/infer-out/tmp/javac.tmp.8ac89b.out'
+[2852][      debug] *** Success. Logs:
+[2852][      debug] Translating 18 source files (18 classes)
+[2852][      debug] done capturing all files
+[2852][      debug] GC stats for capture:
+[2852][      debug]   minor_words: 4.54511e+07
+[2852][      debug]   promoted_words: 7.14128e+06
+[2852][      debug]   major_words: 9.76118e+06
+[2852][      debug]   minor_collections: 107
+[2852][      debug]   major_collections: 5
+[2852][      debug]   compactions: 0
+[2852][      debug]   top_heap_words: 10595840
+[2852][      debug]   
+[2852][      debug] GC stats for main_process_full:
+[2852][      debug]   minor_words: 4.70051e+07
+[2852][      debug]   promoted_words: 7.3003e+06
+[2852][      debug]   major_words: 9.94616e+06
+[2852][      debug]   minor_collections: 111
+[2852][      debug]   major_collections: 7
+[2852][      debug]   compactions: 1
+[2852][      debug]   top_heap_words: 10595840
+[2852][      debug]   
+[2852][environment] Scheduler: file
+[2852][environment] Cores used: 4
+[2852][environment] [2678][      debug] GC stats for capture:
+[2678][      debug]   minor_words: 167790
+[2678][      debug]   promoted_words: 222288
+[2678][      debug]   major_words: 222288
+[2678][      debug]   minor_collections: 1
+[2678][      debug]   major_collections: 0
+[2678][      debug]   compactions: 0
+[2678][      debug]   top_heap_words: 1006592
+[2678][      debug]   
+[2678][environment] Parallel jobs: 4
+[2678][   progress] Found 248 source files to analyze in /Users/gracexin/fall-22-hw5-team-otters/infer-out
+[2885][   progress] docs-core/src/main/java/com/sismics/docs/core/event/AclCreatedAsyncEvent.java starting
+[2887][   progress] docs-core/src/main/java/com/sismics/docs/core/util/indexing/LuceneIndexingHandler.java starting
+[2888][   progress] docs-web-common/src/main/java/com/sismics/rest/util/RestUtil.java starting
+[2886][   progress] docs-core/src/main/java/com/sismics/docs/core/model/jpa/DocumentMetadata.java starting
+[2885][   progress] docs-core/src/main/java/com/sismics/docs/core/event/AclCreatedAsyncEvent.java DONE
+[2885][   progress] docs-core/src/main/java/com/sismics/docs/core/constant/ConfigType.java starting
+[2886][   progress] docs-core/src/main/java/com/sismics/docs/core/model/jpa/DocumentMetadata.java DONE
+[2886][   progress] docs-core/src/main/java/com/sismics/docs/core/util/action/AddTagAction.java starting
+[2885][   progress] docs-core/src/main/java/com/sismics/docs/core/constant/ConfigType.java DONE
+[2885][   progress] docs-core/src/main/java/com/sismics/docs/core/model/jpa/Contributor.java starting
+[2885][   progress] docs-core/src/main/java/com/sismics/docs/core/model/jpa/Contributor.java DONE
+[2885][   progress] docs-web-common/src/main/java/com/sismics/rest/util/ValidationUtil.java starting
+[2885][   progress] docs-web-common/src/main/java/com/sismics/rest/util/ValidationUtil.java DONE
+[2885][   progress] docs-core/src/main/java/com/sismics/docs/core/model/jpa/RouteStep.java starting
+[2885][   progress] docs-core/src/main/java/com/sismics/docs/core/model/jpa/RouteStep.java DONE
+[2885][   progress] docs-core/src/main/java/com/sismics/util/LocaleUtil.java starting
+[2885][   progress] docs-core/src/main/java/com/sismics/util/LocaleUtil.java DONE
+[2885][   progress] docs-core/src/main/java/com/sismics/docs/core/dao/dto/RouteStepDto.java starting
+[2888][   progress] docs-web-common/src/main/java/com/sismics/rest/util/RestUtil.java DONE
+[2888][   progress] docs-core/src/main/java/com/sismics/docs/core/util/action/TagAction.java starting
+[2888][   progress] docs-core/src/main/java/com/sismics/docs/core/util/action/TagAction.java DONE
+[2888][   progress] docs-core/src/main/java/com/sismics/docs/core/model/jpa/AuditLog.java starting
+[2888][   progress] docs-core/src/main/java/com/sismics/docs/core/model/jpa/AuditLog.java DONE
+[2888][   progress] docs-core/src/main/java/com/sismics/docs/core/dao/dto/UserDto.java starting
+[2888][   progress] docs-core/src/main/java/com/sismics/docs/core/dao/dto/UserDto.java DONE
+[2888][   progress] docs-core/src/test/java/com/sismics/util/TestCss.java starting
+[2888][   progress] docs-core/src/test/java/com/sismics/util/TestCss.java DONE
+[2888][   progress] docs-core/src/main/java/com/sismics/docs/core/dao/RouteStepDao.java starting
+[2886][   progress] docs-core/src/main/java/com/sismics/docs/core/util/action/AddTagAction.java DONE
+[2886][   progress] docs-web/src/main/java/com/sismics/docs/rest/resource/DocumentResource.java starting
+[2885][   progress] docs-core/src/main/java/com/sismics/docs/core/dao/dto/RouteStepDto.java DONE
+[2885][   progress] docs-web-common/src/main/java/com/sismics/util/filter/RequestContextFilter.java starting
+[2888][   progress] docs-core/src/main/java/com/sismics/docs/core/dao/RouteStepDao.java DONE
+[2888][   progress] docs-core/src/main/java/com/sismics/docs/core/constant/MetadataType.java starting
+[2888][   progress] docs-core/src/main/java/com/sismics/docs/core/constant/MetadataType.java DONE
+[2888][   progress] docs-core/src/main/java/com/sismics/docs/core/dao/dto/MetadataDto.java starting
+[2888][   progress] docs-core/src/main/java/com/sismics/docs/core/dao/dto/MetadataDto.java DONE
+[2888][   progress] docs-web/src/main/java/com/sismics/docs/rest/resource/GroupResource.java starting
+[2885][   progress] docs-web-common/src/main/java/com/sismics/util/filter/RequestContextFilter.java DONE
+[2885][   progress] docs-core/src/main/java/com/sismics/docs/core/util/format/FormatHandler.java starting
+[2885][   progress] docs-core/src/main/java/com/sismics/docs/core/util/format/FormatHandler.java DONE
+[2885][   progress] docs-core/src/main/java/com/sismics/docs/core/model/jpa/File.java starting
+[2885][   progress] docs-core/src/main/java/com/sismics/docs/core/model/jpa/File.java DONE
+[2885][   progress] docs-core/src/main/java/com/sismics/util/mime/MimeTypeUtil.java starting
+[2885][   progress] docs-core/src/main/java/com/sismics/util/mime/MimeTypeUtil.java DONE
+[2885][   progress] docs-core/src/main/java/com/sismics/docs/core/util/jpa/QueryUtil.java starting
+[2885][   progress] docs-core/src/main/java/com/sismics/docs/core/util/jpa/QueryUtil.java DONE
+[2885][   progress] docs-core/src/main/java/com/sismics/util/ResourceBundleModel.java starting
+[2887][   progress] docs-core/src/main/java/com/sismics/docs/core/util/indexing/LuceneIndexingHandler.java DONE
+[2887][   progress] docs-core/src/main/java/com/sismics/docs/core/util/EncryptionUtil.java starting
+[2887][   progress] docs-core/src/main/java/com/sismics/docs/core/util/EncryptionUtil.java DONE
+[2887][   progress] docs-core/src/main/java/com/sismics/docs/core/constant/RouteStepType.java starting
+[2887][   progress] docs-core/src/main/java/com/sismics/docs/core/constant/RouteStepType.java DONE
+[2887][   progress] docs-core/src/main/java/com/sismics/docs/core/model/jpa/Comment.java starting
+[2887][   progress] docs-core/src/main/java/com/sismics/docs/core/model/jpa/Comment.java DONE
+[2887][   progress] docs-core/src/main/java/com/sismics/docs/core/dao/TagDao.java starting
+[2887][   progress] docs-core/src/main/java/com/sismics/docs/core/dao/TagDao.java DONE
+[2887][   progress] docs-core/src/main/java/com/sismics/docs/core/event/UserEvent.java starting
+[2887][   progress] docs-core/src/main/java/com/sismics/docs/core/event/UserEvent.java DONE
+[2887][   progress] docs-core/src/main/java/com/sismics/docs/core/model/context/AppContext.java starting
+[2885][   progress] docs-core/src/main/java/com/sismics/util/ResourceBundleModel.java DONE
+[2885][   progress] docs-core/src/main/java/com/sismics/docs/core/dao/dto/RouteDto.java starting
+[2885][   progress] docs-core/src/main/java/com/sismics/docs/core/dao/dto/RouteDto.java DONE
+[2885][   progress] docs-core/src/main/java/com/sismics/util/JsonUtil.java starting
+[2885][   progress] docs-core/src/main/java/com/sismics/util/JsonUtil.java DONE
+[2885][   progress] docs-web-common/src/main/java/com/sismics/util/filter/CorsFilter.java starting
+[2887][   progress] docs-core/src/main/java/com/sismics/docs/core/model/context/AppContext.java DONE
+[2887][   progress] docs-core/src/main/java/com/sismics/docs/core/listener/async/FileDeletedAsyncListener.java starting
+[2887][   progress] docs-core/src/main/java/com/sismics/docs/core/listener/async/FileDeletedAsyncListener.java DONE
+[2887][   progress] docs-core/src/main/java/com/sismics/docs/core/dao/dto/AuditLogDto.java starting
+[2887][   progress] docs-core/src/main/java/com/sismics/docs/core/dao/dto/AuditLogDto.java DONE
+[2887][   progress] docs-core/src/main/java/com/sismics/docs/core/listener/async/WebhookAsyncListener.java starting
+[2885][   progress] docs-web-common/src/main/java/com/sismics/util/filter/CorsFilter.java DONE
+[2885][   progress] docs-core/src/main/java/com/sismics/docs/core/dao/ShareDao.java starting
+[2885][   progress] docs-core/src/main/java/com/sismics/docs/core/dao/ShareDao.java DONE
+[2885][   progress] docs-web/src/test/java/com/sismics/docs/rest/TestRouteModelResource.java starting
+[2887][   progress] docs-core/src/main/java/com/sismics/docs/core/listener/async/WebhookAsyncListener.java DONE
+[2887][   progress] docs-web/src/test/java/com/sismics/docs/rest/TestAppResource.java starting
+[2888][   progress] docs-web/src/main/java/com/sismics/docs/rest/resource/GroupResource.java DONE
+[2888][   progress] docs-core/src/main/java/com/sismics/docs/core/util/authentication/LdapAuthenticationHandler.java starting
+[2888][   progress] docs-core/src/main/java/com/sismics/docs/core/util/authentication/LdapAuthenticationHandler.java DONE
+[2888][   progress] docs-core/src/main/java/com/sismics/docs/core/dao/criteria/RouteModelCriteria.java starting
+[2888][   progress] docs-core/src/main/java/com/sismics/docs/core/dao/criteria/RouteModelCriteria.java DONE
+[2888][   progress] docs-web-common/src/main/java/com/sismics/rest/exception/ForbiddenClientException.java starting
+[2888][   progress] docs-web-common/src/main/java/com/sismics/rest/exception/ForbiddenClientException.java DONE
+[2888][   progress] docs-core/src/main/java/com/sismics/docs/core/constant/PermType.java starting
+[2888][   progress] docs-core/src/main/java/com/sismics/docs/core/constant/PermType.java DONE
+[2888][   progress] docs-core/src/main/java/com/sismics/util/totp/GoogleAuthenticatorConfig.java starting
+[2888][   progress] docs-core/src/main/java/com/sismics/util/totp/GoogleAuthenticatorConfig.java DONE
+[2888][   progress] docs-core/src/main/java/com/sismics/docs/core/service/InboxService.java starting
+[2885][   progress] docs-web/src/test/java/com/sismics/docs/rest/TestRouteModelResource.java DONE
+[2885][   progress] docs-core/src/main/java/com/sismics/docs/core/model/jpa/User.java starting
+[2885][   progress] docs-core/src/main/java/com/sismics/docs/core/model/jpa/User.java DONE
+[2885][   progress] docs-web-common/src/main/java/com/sismics/security/AnonymousPrincipal.java starting
+[2885][   progress] docs-web-common/src/main/java/com/sismics/security/AnonymousPrincipal.java DONE
+[2885][   progress] docs-web/src/test/java/com/sismics/docs/rest/resource/ThirdPartyWebhookResource.java starting
+[2885][   progress] docs-web/src/test/java/com/sismics/docs/rest/resource/ThirdPartyWebhookResource.java DONE
+[2885][   progress] docs-core/src/main/java/com/sismics/docs/core/model/jpa/Acl.java starting
+[2885][   progress] docs-core/src/main/java/com/sismics/docs/core/model/jpa/Acl.java DONE
+[2885][   progress] docs-core/src/main/java/com/sismics/util/jpa/EMF.java starting
+[2888][   progress] docs-core/src/main/java/com/sismics/docs/core/service/InboxService.java DONE
+[2888][   progress] docs-core/src/main/java/com/sismics/docs/core/util/TransactionUtil.java starting
+[2888][   progress] docs-core/src/main/java/com/sismics/docs/core/util/TransactionUtil.java DONE
+[2888][   progress] docs-core/src/main/java/com/sismics/docs/core/dao/dto/RouteModelDto.java starting
+[2888][   progress] docs-core/src/main/java/com/sismics/docs/core/dao/dto/RouteModelDto.java DONE
+[2888][   progress] docs-web-common/src/main/java/com/sismics/util/filter/HeaderBasedSecurityFilter.java starting
+[2888][   progress] docs-web-common/src/main/java/com/sismics/util/filter/HeaderBasedSecurityFilter.java DONE
+[2888][   progress] docs-core/src/main/java/com/sismics/docs/core/model/jpa/RouteModel.java starting
+[2888][   progress] docs-core/src/main/java/com/sismics/docs/core/model/jpa/RouteModel.java DONE
+[2888][   progress] docs-web/src/test/java/com/sismics/docs/rest/TestRouteResource.java starting
+[2885][   progress] docs-core/src/main/java/com/sismics/util/jpa/EMF.java DONE
+[2885][   progress] docs-core/src/main/java/com/sismics/docs/core/dao/PasswordRecoveryDao.java starting
+[2885][   progress] docs-core/src/main/java/com/sismics/docs/core/dao/PasswordRecoveryDao.java DONE
+[2885][   progress] docs-core/src/main/java/com/sismics/docs/core/model/jpa/DocumentTag.java starting
+[2887][   progress] docs-web/src/test/java/com/sismics/docs/rest/TestAppResource.java DONE
+[2887][   progress] docs-web/src/test/java/com/sismics/docs/rest/TestDocumentResource.java starting
+[2885][   progress] docs-core/src/main/java/com/sismics/docs/core/model/jpa/DocumentTag.java DONE
+[2885][   progress] docs-core/src/main/java/com/sismics/docs/core/dao/criteria/MetadataCriteria.java starting
+[2885][   progress] docs-core/src/main/java/com/sismics/docs/core/dao/criteria/MetadataCriteria.java DONE
+[2885][   progress] docs-core/src/main/java/com/sismics/docs/core/util/pdf/PdfPage.java starting
+[2885][   progress] docs-core/src/main/java/com/sismics/docs/core/util/pdf/PdfPage.java DONE
+[2885][   progress] docs-core/src/main/java/com/sismics/docs/core/dao/dto/RelationDto.java starting
+[2885][   progress] docs-core/src/main/java/com/sismics/docs/core/dao/dto/RelationDto.java DONE
+[2885][   progress] docs-core/src/main/java/com/sismics/docs/core/util/ConfigUtil.java starting
+[2885][   progress] docs-core/src/main/java/com/sismics/docs/core/util/ConfigUtil.java DONE
+[2885][   progress] docs-core/src/main/java/com/sismics/docs/core/model/jpa/PasswordRecovery.java starting
+[2885][   progress] docs-core/src/main/java/com/sismics/docs/core/model/jpa/PasswordRecovery.java DONE
+[2885][   progress] docs-core/src/main/java/com/sismics/util/totp/GoogleAuthenticatorKey.java starting
+[2885][   progress] docs-core/src/main/java/com/sismics/util/totp/GoogleAuthenticatorKey.java DONE
+[2885][   progress] docs-core/src/main/java/com/sismics/docs/core/model/jpa/AuthenticationToken.java starting
+[2885][   progress] docs-core/src/main/java/com/sismics/docs/core/model/jpa/AuthenticationToken.java DONE
+[2885][   progress] docs-core/src/main/java/com/sismics/util/EmailUtil.java starting
+[2885][   progress] docs-core/src/main/java/com/sismics/util/EmailUtil.java DONE
+[2885][   progress] docs-core/src/main/java/com/sismics/docs/core/model/jpa/Route.java starting
+[2885][   progress] docs-core/src/main/java/com/sismics/docs/core/model/jpa/Route.java DONE
+[2885][   progress] docs-core/src/main/java/com/sismics/docs/core/event/DocumentDeletedAsyncEvent.java starting
+[2885][   progress] docs-core/src/main/java/com/sismics/docs/core/event/DocumentDeletedAsyncEvent.java DONE
+[2885][   progress] docs-core/src/main/java/com/sismics/util/log4j/LogEntry.java starting
+[2885][   progress] docs-core/src/main/java/com/sismics/util/log4j/LogEntry.java DONE
+[2885][   progress] docs-core/src/main/java/com/sismics/docs/core/dao/dto/TagDto.java starting
+[2885][   progress] docs-core/src/main/java/com/sismics/docs/core/dao/dto/TagDto.java DONE
+[2885][   progress] docs-core/src/main/java/com/sismics/util/ClasspathScanner.java starting
+[2885][   progress] docs-core/src/main/java/com/sismics/util/ClasspathScanner.java DONE
+[2885][   progress] docs-core/src/main/java/com/sismics/docs/core/dao/VocabularyDao.java starting
+[2885][   progress] docs-core/src/main/java/com/sismics/docs/core/dao/VocabularyDao.java DONE
+[2885][   progress] docs-core/src/main/java/com/sismics/docs/core/dao/criteria/DocumentCriteria.java starting
+[2885][   progress] docs-core/src/main/java/com/sismics/docs/core/dao/criteria/DocumentCriteria.java DONE
+[2885][   progress] docs-web/src/test/java/com/sismics/docs/rest/TestTagResource.java starting
+[2885][   progress] docs-web/src/test/java/com/sismics/docs/rest/TestTagResource.java DONE
+[2885][   progress] docs-core/src/main/java/com/sismics/docs/core/util/TagUtil.java starting
+[2885][   progress] docs-core/src/main/java/com/sismics/docs/core/util/TagUtil.java DONE
+[2885][   progress] docs-core/src/main/java/com/sismics/docs/core/dao/criteria/RouteCriteria.java starting
+[2885][   progress] docs-core/src/main/java/com/sismics/docs/core/dao/criteria/RouteCriteria.java DONE
+[2885][   progress] docs-core/src/main/java/com/sismics/docs/core/dao/ConfigDao.java starting
+[2885][   progress] docs-core/src/main/java/com/sismics/docs/core/dao/ConfigDao.java DONE
+[2885][   progress] docs-web/src/main/java/com/sismics/docs/rest/resource/BaseResource.java starting
+[2885][   progress] docs-web/src/main/java/com/sismics/docs/rest/resource/BaseResource.java DONE
+[2885][   progress] docs-core/src/test/java/com/sismics/util/format/TestPdfFormatHandler.java starting
+[2888][   progress] docs-web/src/test/java/com/sismics/docs/rest/TestRouteResource.java DONE
+[2888][   progress] docs-core/src/main/java/com/sismics/util/totp/KeyRepresentation.java starting
+[2888][   progress] docs-core/src/main/java/com/sismics/util/totp/KeyRepresentation.java DONE
+[2888][   progress] docs-core/src/main/java/com/sismics/docs/core/listener/async/FileProcessingAsyncListener.java starting
+[2888][   progress] docs-core/src/main/java/com/sismics/docs/core/listener/async/FileProcessingAsyncListener.java DONE
+[2888][   progress] docs-core/src/main/java/com/sismics/docs/core/dao/criteria/RouteStepCriteria.java starting
+[2888][   progress] docs-core/src/main/java/com/sismics/docs/core/dao/criteria/RouteStepCriteria.java DONE
+[2888][   progress] docs-core/src/main/java/com/sismics/docs/core/service/FileService.java starting
+[2888][   progress] docs-core/src/main/java/com/sismics/docs/core/service/FileService.java DONE
+[2888][   progress] docs-core/src/test/java/com/sismics/docs/core/dao/jpa/TestJpa.java starting
+[2888][   progress] docs-core/src/test/java/com/sismics/docs/core/dao/jpa/TestJpa.java DONE
+[2888][   progress] docs-core/src/test/java/com/sismics/docs/BaseTransactionalTest.java starting
+[2888][   progress] docs-core/src/test/java/com/sismics/docs/BaseTransactionalTest.java DONE
+[2888][   progress] docs-core/src/main/java/com/sismics/util/ResourceUtil.java starting
+[2888][   progress] docs-core/src/main/java/com/sismics/util/ResourceUtil.java DONE
+[2888][   progress] docs-core/src/main/java/com/sismics/docs/core/util/SecurityUtil.java starting
+[2888][   progress] docs-core/src/main/java/com/sismics/docs/core/util/SecurityUtil.java DONE
+[2888][   progress] docs-web/src/main/java/com/sismics/docs/rest/resource/FileResource.java starting
+[2885][   progress] docs-core/src/test/java/com/sismics/util/format/TestPdfFormatHandler.java DONE
+[2885][   progress] docs-core/src/main/java/com/sismics/docs/core/dao/criteria/TagCriteria.java starting
+[2885][   progress] docs-core/src/main/java/com/sismics/docs/core/dao/criteria/TagCriteria.java DONE
+[2885][   progress] docs-core/src/main/java/com/sismics/docs/core/dao/UserDao.java starting
+[2885][   progress] docs-core/src/main/java/com/sismics/docs/core/dao/UserDao.java DONE
+[2885][   progress] docs-web/src/main/java/com/sismics/docs/rest/resource/CommentResource.java starting
+[2886][   progress] docs-web/src/main/java/com/sismics/docs/rest/resource/DocumentResource.java DONE
+[2886][   progress] docs-core/src/main/java/com/sismics/util/totp/GoogleAuthenticatorException.java starting
+[2886][   progress] docs-core/src/main/java/com/sismics/util/totp/GoogleAuthenticatorException.java DONE
+[2886][   progress] docs-core/src/main/java/com/sismics/util/log4j/MemoryAppender.java starting
+[2886][   progress] docs-core/src/main/java/com/sismics/util/log4j/MemoryAppender.java DONE
+[2886][   progress] docs-core/src/test/java/com/sismics/util/TestGoogleAuthenticator.java starting
+[2885][   progress] docs-web/src/main/java/com/sismics/docs/rest/resource/CommentResource.java DONE
+[2885][   progress] docs-web-common/src/main/java/com/sismics/rest/exception/ServerException.java starting
+[2885][   progress] docs-web-common/src/main/java/com/sismics/rest/exception/ServerException.java DONE
+[2885][   progress] docs-web/src/test/java/com/sismics/docs/rest/TestAuditLogResource.java starting
+[2886][   progress] docs-core/src/test/java/com/sismics/util/TestGoogleAuthenticator.java DONE
+[2886][   progress] docs-web/src/test/java/com/sismics/docs/rest/TestVocabularyResource.java starting
+[2885][   progress] docs-web/src/test/java/com/sismics/docs/rest/TestAuditLogResource.java DONE
+[2885][   progress] docs-core/src/main/java/com/sismics/util/jpa/DbOpenHelper.java starting
+[2885][   progress] docs-core/src/main/java/com/sismics/util/jpa/DbOpenHelper.java DONE
+[2885][   progress] docs-core/src/main/java/com/sismics/docs/core/dao/dto/DocumentDto.java starting
+[2885][   progress] docs-core/src/main/java/com/sismics/docs/core/dao/dto/DocumentDto.java DONE
+[2885][   progress] docs-core/src/main/java/com/sismics/docs/core/listener/async/RebuildIndexAsyncListener.java starting
+[2887][   progress] docs-web/src/test/java/com/sismics/docs/rest/TestDocumentResource.java DONE
+[2887][   progress] docs-core/src/main/java/com/sismics/docs/core/dao/AuditLogDao.java starting
+[2887][   progress] docs-core/src/main/java/com/sismics/docs/core/dao/AuditLogDao.java DONE
+[2887][   progress] docs-core/src/main/java/com/sismics/docs/core/event/AclDeletedAsyncEvent.java starting
+[2887][   progress] docs-core/src/main/java/com/sismics/docs/core/event/AclDeletedAsyncEvent.java DONE
+[2887][   progress] docs-core/src/main/java/com/sismics/docs/core/model/jpa/UserGroup.java starting
+[2887][   progress] docs-core/src/main/java/com/sismics/docs/core/model/jpa/UserGroup.java DONE
+[2887][   progress] docs-core/src/main/java/com/sismics/util/Scalr.java starting
+[2885][   progress] docs-core/src/main/java/com/sismics/docs/core/listener/async/RebuildIndexAsyncListener.java DONE
+[2885][   progress] docs-web-common/src/test/java/com/sismics/docs/rest/BaseJerseyTest.java starting
+[2885][   progress] docs-web-common/src/test/java/com/sismics/docs/rest/BaseJerseyTest.java DONE
+[2885][   progress] docs-core/src/main/java/com/sismics/docs/core/util/format/FormatHandlerUtil.java starting
+[2885][   progress] docs-core/src/main/java/com/sismics/docs/core/util/format/FormatHandlerUtil.java DONE
+[2885][   progress] docs-core/src/main/java/com/sismics/docs/core/constant/AclType.java starting
+[2885][   progress] docs-core/src/main/java/com/sismics/docs/core/constant/AclType.java DONE
+[2885][   progress] docs-core/src/main/java/com/sismics/docs/core/dao/dto/WebhookDto.java starting
+[2885][   progress] docs-core/src/main/java/com/sismics/docs/core/dao/dto/WebhookDto.java DONE
+[2885][   progress] docs-core/src/main/java/com/sismics/util/HtmlToPlainText.java starting
+[2886][   progress] docs-web/src/test/java/com/sismics/docs/rest/TestVocabularyResource.java DONE
+[2886][   progress] docs-core/src/main/java/com/sismics/docs/core/dao/ContributorDao.java starting
+[2886][   progress] docs-core/src/main/java/com/sismics/docs/core/dao/ContributorDao.java DONE
+[2886][   progress] docs-web-common/src/main/java/com/sismics/rest/util/AclUtil.java starting
+[2886][   progress] docs-web-common/src/main/java/com/sismics/rest/util/AclUtil.java DONE
+[2886][   progress] docs-core/src/main/java/com/sismics/docs/core/constant/WebhookEvent.java starting
+[2886][   progress] docs-core/src/main/java/com/sismics/docs/core/constant/WebhookEvent.java DONE
+[2886][   progress] docs-core/src/main/java/com/sismics/util/MessageUtil.java starting
+[2886][   progress] docs-core/src/main/java/com/sismics/util/MessageUtil.java DONE
+[2886][   progress] docs-core/src/main/java/com/sismics/docs/core/constant/Constants.java starting
+[2886][   progress] docs-core/src/main/java/com/sismics/docs/core/constant/Constants.java DONE
+[2886][   progress] docs-core/src/main/java/com/sismics/docs/core/constant/AuditLogType.java starting
+[2886][   progress] docs-core/src/main/java/com/sismics/docs/core/constant/AuditLogType.java DONE
+[2886][   progress] docs-core/src/main/java/com/sismics/docs/core/dao/MetadataDao.java starting
+[2885][   progress] docs-core/src/main/java/com/sismics/util/HtmlToPlainText.java DONE
+[2885][   progress] docs-core/src/main/java/com/sismics/docs/core/event/DocumentCreatedAsyncEvent.java starting
+[2885][   progress] docs-core/src/main/java/com/sismics/docs/core/event/DocumentCreatedAsyncEvent.java DONE
+[2885][   progress] docs-web/src/test/java/com/sismics/docs/rest/TestShareResource.java starting
+[2886][   progress] docs-core/src/main/java/com/sismics/docs/core/dao/MetadataDao.java DONE
+[2886][   progress] docs-core/src/main/java/com/sismics/docs/core/dao/FileDao.java starting
+[2886][   progress] docs-core/src/main/java/com/sismics/docs/core/dao/FileDao.java DONE
+[2886][   progress] docs-core/src/main/java/com/sismics/docs/core/util/action/RemoveTagAction.java starting
+[2886][   progress] docs-core/src/main/java/com/sismics/docs/core/util/action/RemoveTagAction.java DONE
+[2886][   progress] docs-core/src/main/java/com/sismics/docs/core/model/jpa/Loggable.java starting
+[2886][   progress] docs-core/src/main/java/com/sismics/docs/core/model/jpa/Loggable.java DONE
+[2886][   progress] docs-web/src/main/java/com/sismics/docs/rest/resource/RouteResource.java starting
+[2888][   progress] docs-web/src/main/java/com/sismics/docs/rest/resource/FileResource.java DONE
+[2888][   progress] docs-core/src/main/java/com/sismics/docs/core/model/jpa/Role.java starting
+[2888][   progress] docs-core/src/main/java/com/sismics/docs/core/model/jpa/Role.java DONE
+[2888][   progress] docs-core/src/main/java/com/sismics/docs/core/dao/criteria/AuditLogCriteria.java starting
+[2888][   progress] docs-core/src/main/java/com/sismics/docs/core/dao/criteria/AuditLogCriteria.java DONE
+[2888][   progress] docs-core/src/main/java/com/sismics/docs/core/dao/DocumentMetadataDao.java starting
+[2888][   progress] docs-core/src/main/java/com/sismics/docs/core/dao/DocumentMetadataDao.java DONE
+[2888][   progress] docs-core/src/main/java/com/sismics/docs/core/event/FileDeletedAsyncEvent.java starting
+[2888][   progress] docs-core/src/main/java/com/sismics/docs/core/event/FileDeletedAsyncEvent.java DONE
+[2888][   progress] docs-web/src/test/java/com/sismics/docs/rest/TestThemeResource.java starting
+[2887][   progress] docs-core/src/main/java/com/sismics/util/Scalr.java DONE
+[2887][   progress] docs-web/src/main/java/com/sismics/docs/rest/resource/DocsMessageBodyWriter.java starting
+[2887][   progress] docs-web/src/main/java/com/sismics/docs/rest/resource/DocsMessageBodyWriter.java DONE
+[2887][   progress] docs-web/src/main/java/com/sismics/docs/rest/constant/BaseFunction.java starting
+[2887][   progress] docs-web/src/main/java/com/sismics/docs/rest/constant/BaseFunction.java DONE
+[2887][   progress] docs-core/src/main/java/com/sismics/docs/core/dao/dto/CommentDto.java starting
+[2887][   progress] docs-core/src/main/java/com/sismics/docs/core/dao/dto/CommentDto.java DONE
+[2887][   progress] docs-web/src/test/java/com/sismics/docs/rest/TestWebhookResource.java starting
+[2885][   progress] docs-web/src/test/java/com/sismics/docs/rest/TestShareResource.java DONE
+[2885][   progress] docs-web-common/src/main/java/com/sismics/util/filter/SecurityFilter.java starting
+[2885][   progress] docs-web-common/src/main/java/com/sismics/util/filter/SecurityFilter.java DONE
+[2885][   progress] docs-core/src/main/java/com/sismics/docs/core/model/jpa/Document.java starting
+[2885][   progress] docs-core/src/main/java/com/sismics/docs/core/model/jpa/Document.java DONE
+[2885][   progress] docs-core/src/main/java/com/sismics/util/HttpUtil.java starting
+[2885][   progress] docs-core/src/main/java/com/sismics/util/HttpUtil.java DONE
+[2885][   progress] docs-core/src/main/java/com/sismics/docs/core/model/jpa/Tag.java starting
+[2885][   progress] docs-core/src/main/java/com/sismics/docs/core/model/jpa/Tag.java DONE
+[2885][   progress] docs-core/src/main/java/com/sismics/docs/core/util/authentication/InternalAuthenticationHandler.java starting
+[2885][   progress] docs-core/src/main/java/com/sismics/docs/core/util/authentication/InternalAuthenticationHandler.java DONE
+[2885][   progress] docs-core/src/main/java/com/sismics/docs/core/util/DocumentUtil.java starting
+[2885][   progress] docs-core/src/main/java/com/sismics/docs/core/util/DocumentUtil.java DONE
+[2885][   progress] docs-core/src/main/java/com/sismics/util/ImageDeskew.java starting
+[2885][   progress] docs-core/src/main/java/com/sismics/util/ImageDeskew.java DONE
+[2885][   progress] docs-core/src/main/java/com/sismics/docs/core/dao/dto/GroupDto.java starting
+[2885][   progress] docs-core/src/main/java/com/sismics/docs/core/dao/dto/GroupDto.java DONE
+[2885][   progress] docs-web/src/test/java/com/sismics/docs/rest/TestUserResource.java starting
+[2887][   progress] docs-web/src/test/java/com/sismics/docs/rest/TestWebhookResource.java DONE
+[2887][   progress] docs-core/src/main/java/com/sismics/docs/core/util/jpa/SortCriteria.java starting
+[2887][   progress] docs-core/src/main/java/com/sismics/docs/core/util/jpa/SortCriteria.java DONE
+[2887][   progress] docs-core/src/main/java/com/sismics/docs/core/util/format/OdtFormatHandler.java starting
+[2887][   progress] docs-core/src/main/java/com/sismics/docs/core/util/format/OdtFormatHandler.java DONE
+[2887][   progress] docs-web-common/src/test/java/com/sismics/docs/rest/util/TestValidationUtil.java starting
+[2887][   progress] docs-web-common/src/test/java/com/sismics/docs/rest/util/TestValidationUtil.java DONE
+[2887][   progress] docs-web-common/src/main/java/com/sismics/util/filter/TokenBasedSecurityFilter.java starting
+[2887][   progress] docs-web-common/src/main/java/com/sismics/util/filter/TokenBasedSecurityFilter.java DONE
+[2887][   progress] docs-core/src/main/java/com/sismics/docs/core/util/action/ProcessFilesAction.java starting
+[2887][   progress] docs-core/src/main/java/com/sismics/docs/core/util/action/ProcessFilesAction.java DONE
+[2887][   progress] docs-core/src/main/java/com/sismics/docs/core/util/jpa/QueryParam.java starting
+[2887][   progress] docs-core/src/main/java/com/sismics/docs/core/util/jpa/QueryParam.java DONE
+[2887][   progress] docs-core/src/main/java/com/sismics/docs/core/util/format/PptxFormatHandler.java starting
+[2888][   progress] docs-web/src/test/java/com/sismics/docs/rest/TestThemeResource.java DONE
+[2888][   progress] docs-core/src/main/java/com/sismics/docs/core/listener/async/DocumentDeletedAsyncListener.java starting
+[2888][   progress] docs-core/src/main/java/com/sismics/docs/core/listener/async/DocumentDeletedAsyncListener.java DONE
+[2888][   progress] docs-web/src/main/java/com/sismics/docs/rest/resource/AclResource.java starting
+[2887][   progress] docs-core/src/main/java/com/sismics/docs/core/util/format/PptxFormatHandler.java DONE
+[2887][   progress] docs-core/src/main/java/org/apache/pdfbox/pdmodel/font/DocsPDType1Font.java starting
+[2887][   progress] docs-core/src/main/java/org/apache/pdfbox/pdmodel/font/DocsPDType1Font.java DONE
+[2887][   progress] docs-core/src/main/java/com/sismics/docs/core/util/format/DocxFormatHandler.java starting
+[2886][   progress] docs-web/src/main/java/com/sismics/docs/rest/resource/RouteResource.java DONE
+[2886][   progress] docs-web/src/main/java/com/sismics/docs/rest/resource/UserResource.java starting
+[2887][   progress] docs-core/src/main/java/com/sismics/docs/core/util/format/DocxFormatHandler.java DONE
+[2887][   progress] docs-core/src/test/java/com/sismics/docs/core/util/TestFileUtil.java starting
+[2885][   progress] docs-web/src/test/java/com/sismics/docs/rest/TestUserResource.java DONE
+[2885][   progress] docs-core/src/main/java/com/sismics/docs/core/model/jpa/Metadata.java starting
+[2885][   progress] docs-core/src/main/java/com/sismics/docs/core/model/jpa/Metadata.java DONE
+[2885][   progress] docs-core/src/main/java/com/sismics/docs/core/util/RoutingUtil.java starting
+[2885][   progress] docs-core/src/main/java/com/sismics/docs/core/util/RoutingUtil.java DONE
+[2885][   progress] docs-core/src/main/java/com/sismics/docs/core/dao/CommentDao.java starting
+[2885][   progress] docs-core/src/main/java/com/sismics/docs/core/dao/CommentDao.java DONE
+[2885][   progress] docs-core/src/main/java/com/sismics/util/totp/GoogleAuthenticator.java starting
+[2885][   progress] docs-core/src/main/java/com/sismics/util/totp/GoogleAuthenticator.java DONE
+[2885][   progress] docs-core/src/main/java/com/sismics/docs/core/model/jpa/BaseFunction.java starting
+[2885][   progress] docs-core/src/main/java/com/sismics/docs/core/model/jpa/BaseFunction.java DONE
+[2885][   progress] docs-core/src/main/java/com/sismics/docs/core/model/jpa/Group.java starting
+[2885][   progress] docs-core/src/main/java/com/sismics/docs/core/model/jpa/Group.java DONE
+[2885][   progress] docs-web/src/main/java/com/sismics/docs/rest/resource/VocabularyResource.java starting
+[2887][   progress] docs-core/src/test/java/com/sismics/docs/core/util/TestFileUtil.java DONE
+[2887][   progress] docs-core/src/main/java/com/sismics/docs/core/model/jpa/Vocabulary.java starting
+[2887][   progress] docs-core/src/main/java/com/sismics/docs/core/model/jpa/Vocabulary.java DONE
+[2887][   progress] docs-core/src/main/java/com/sismics/docs/core/model/jpa/Share.java starting
+[2887][   progress] docs-core/src/main/java/com/sismics/docs/core/model/jpa/Share.java DONE
+[2887][   progress] docs-web/src/test/java/com/sismics/docs/rest/TestCommentResource.java starting
+[2888][   progress] docs-web/src/main/java/com/sismics/docs/rest/resource/AclResource.java DONE
+[2888][   progress] docs-web-common/src/test/java/com/sismics/docs/rest/util/ClientUtil.java starting
+[2888][   progress] docs-web-common/src/test/java/com/sismics/docs/rest/util/ClientUtil.java DONE
+[2888][   progress] docs-web/src/main/java/com/sismics/docs/rest/resource/WebhookResource.java starting
+[2885][   progress] docs-web/src/main/java/com/sismics/docs/rest/resource/VocabularyResource.java DONE
+[2885][   progress] docs-web/src/main/java/com/sismics/docs/rest/resource/RouteModelResource.java starting
+[2888][   progress] docs-web/src/main/java/com/sismics/docs/rest/resource/WebhookResource.java DONE
+[2888][   progress] docs-core/src/main/java/com/sismics/docs/core/dao/GroupDao.java starting
+[2888][   progress] docs-core/src/main/java/com/sismics/docs/core/dao/GroupDao.java DONE
+[2888][   progress] docs-core/src/main/java/com/sismics/util/io/InputStreamReaderThread.java starting
+[2888][   progress] docs-core/src/main/java/com/sismics/util/io/InputStreamReaderThread.java DONE
+[2888][   progress] docs-core/src/main/java/com/sismics/util/totp/ReseedingSecureRandom.java starting
+[2888][   progress] docs-core/src/main/java/com/sismics/util/totp/ReseedingSecureRandom.java DONE
+[2888][   progress] docs-core/src/main/java/com/sismics/docs/core/util/AuditLogUtil.java starting
+[2888][   progress] docs-core/src/main/java/com/sismics/docs/core/util/AuditLogUtil.java DONE
+[2888][   progress] docs-core/src/main/java/com/sismics/docs/core/util/authentication/AuthenticationUtil.java starting
+[2888][   progress] docs-core/src/main/java/com/sismics/docs/core/util/authentication/AuthenticationUtil.java DONE
+[2888][   progress] docs-core/src/main/java/com/sismics/util/log4j/LogCriteria.java starting
+[2888][   progress] docs-core/src/main/java/com/sismics/util/log4j/LogCriteria.java DONE
+[2888][   progress] docs-core/src/main/java/com/sismics/docs/core/dao/criteria/WebhookCriteria.java starting
+[2888][   progress] docs-core/src/main/java/com/sismics/docs/core/dao/criteria/WebhookCriteria.java DONE
+[2888][   progress] docs-core/src/main/java/com/sismics/docs/core/event/RebuildIndexAsyncEvent.java starting
+[2888][   progress] docs-core/src/main/java/com/sismics/docs/core/event/RebuildIndexAsyncEvent.java DONE
+[2888][   progress] docs-core/src/main/java/com/sismics/docs/core/dao/criteria/GroupCriteria.java starting
+[2888][   progress] docs-core/src/main/java/com/sismics/docs/core/dao/criteria/GroupCriteria.java DONE
+[2888][   progress] docs-core/src/main/java/com/sismics/docs/core/util/format/TextPlainFormatHandler.java starting
+[2888][   progress] docs-core/src/main/java/com/sismics/docs/core/util/format/TextPlainFormatHandler.java DONE
+[2888][   progress] docs-web/src/test/java/com/sismics/docs/rest/TestFileResource.java starting
+[2887][   progress] docs-web/src/test/java/com/sismics/docs/rest/TestCommentResource.java DONE
+[2887][   progress] docs-core/src/main/java/com/sismics/docs/core/dao/RouteModelDao.java starting
+[2887][   progress] docs-core/src/main/java/com/sismics/docs/core/dao/RouteModelDao.java DONE
+[2887][   progress] docs-core/src/main/java/com/sismics/docs/core/dao/RelationDao.java starting
+[2887][   progress] docs-core/src/main/java/com/sismics/docs/core/dao/RelationDao.java DONE
+[2887][   progress] docs-core/src/main/java/com/sismics/docs/core/model/jpa/Webhook.java starting
+[2887][   progress] docs-core/src/main/java/com/sismics/docs/core/model/jpa/Webhook.java DONE
+[2887][   progress] docs-core/src/main/java/com/sismics/docs/core/model/jpa/Relation.java starting
+[2887][   progress] docs-core/src/main/java/com/sismics/docs/core/model/jpa/Relation.java DONE
+[2887][   progress] docs-core/src/main/java/com/sismics/docs/core/util/format/ImageFormatHandler.java starting
+[2885][   progress] docs-web/src/main/java/com/sismics/docs/rest/resource/RouteModelResource.java DONE
+[2885][   progress] docs-core/src/main/java/com/sismics/docs/core/listener/async/DocumentUpdatedAsyncListener.java starting
+[2885][   progress] docs-core/src/main/java/com/sismics/docs/core/listener/async/DocumentUpdatedAsyncListener.java DONE
+[2885][   progress] docs-web/src/main/java/com/sismics/docs/rest/resource/AppResource.java starting
+[2887][   progress] docs-core/src/main/java/com/sismics/docs/core/util/format/ImageFormatHandler.java DONE
+[2887][   progress] docs-core/src/main/java/com/sismics/util/ImageUtil.java starting
+[2887][   progress] docs-core/src/main/java/com/sismics/util/ImageUtil.java DONE
+[2887][   progress] docs-core/src/main/java/com/sismics/docs/core/model/jpa/Config.java starting
+[2887][   progress] docs-core/src/main/java/com/sismics/docs/core/model/jpa/Config.java DONE
+[2887][   progress] docs-core/src/main/java/com/sismics/docs/core/util/ActionUtil.java starting
+[2887][   progress] docs-core/src/main/java/com/sismics/docs/core/util/ActionUtil.java DONE
+[2887][   progress] docs-core/src/main/java/com/sismics/docs/core/dao/dto/DocumentMetadataDto.java starting
+[2887][   progress] docs-core/src/main/java/com/sismics/docs/core/dao/dto/DocumentMetadataDto.java DONE
+[2887][   progress] docs-core/src/main/java/com/sismics/docs/core/util/PdfUtil.java starting
+[2887][   progress] docs-core/src/main/java/com/sismics/docs/core/util/PdfUtil.java DONE
+[2887][   progress] docs-core/src/test/java/com/sismics/util/TestMimeTypeUtil.java starting
+[2887][   progress] docs-core/src/test/java/com/sismics/util/TestMimeTypeUtil.java DONE
+[2887][   progress] docs-web/src/test/java/com/sismics/docs/rest/TestMetadataResource.java starting
+[2887][   progress] docs-web/src/test/java/com/sismics/docs/rest/TestMetadataResource.java DONE
+[2887][   progress] docs-core/src/main/java/com/sismics/util/EnvironmentUtil.java starting
+[2887][   progress] docs-core/src/main/java/com/sismics/util/EnvironmentUtil.java DONE
+[2887][   progress] docs-core/src/main/java/com/sismics/docs/core/util/authentication/AuthenticationHandler.java starting
+[2887][   progress] docs-core/src/main/java/com/sismics/docs/core/util/authentication/AuthenticationHandler.java DONE
+[2887][   progress] docs-core/src/main/java/com/sismics/docs/core/event/FileCreatedAsyncEvent.java starting
+[2887][   progress] docs-core/src/main/java/com/sismics/docs/core/event/FileCreatedAsyncEvent.java DONE
+[2887][   progress] docs-web/src/test/java/com/sismics/docs/rest/TestAclResource.java starting
+[2888][   progress] docs-web/src/test/java/com/sismics/docs/rest/TestFileResource.java DONE
+[2888][   progress] docs-core/src/main/java/com/sismics/docs/core/constant/RouteStepTransition.java starting
+[2888][   progress] docs-core/src/main/java/com/sismics/docs/core/constant/RouteStepTransition.java DONE
+[2888][   progress] docs-core/src/main/java/com/sismics/docs/core/listener/async/PasswordLostAsyncListener.java starting
+[2888][   progress] docs-core/src/main/java/com/sismics/docs/core/listener/async/PasswordLostAsyncListener.java DONE
+[2888][   progress] docs-web/src/test/java/com/sismics/docs/rest/TestGroupResource.java starting
+[2886][   progress] docs-web/src/main/java/com/sismics/docs/rest/resource/UserResource.java DONE
+[2886][   progress] docs-core/src/main/java/com/sismics/docs/core/util/DirectoryUtil.java starting
+[2886][   progress] docs-core/src/main/java/com/sismics/docs/core/util/DirectoryUtil.java DONE
+[2886][   progress] docs-core/src/main/java/com/sismics/docs/core/dao/dto/ContributorDto.java starting
+[2886][   progress] docs-core/src/main/java/com/sismics/docs/core/dao/dto/ContributorDto.java DONE
+[2886][   progress] docs-core/src/main/java/com/sismics/docs/core/dao/WebhookDao.java starting
+[2886][   progress] docs-core/src/main/java/com/sismics/docs/core/dao/WebhookDao.java DONE
+[2886][   progress] docs-web-common/src/main/java/com/sismics/security/UserPrincipal.java starting
+[2886][   progress] docs-web-common/src/main/java/com/sismics/security/UserPrincipal.java DONE
+[2886][   progress] docs-web/src/main/java/com/sismics/docs/rest/resource/ShareResource.java starting
+[2888][   progress] docs-web/src/test/java/com/sismics/docs/rest/TestGroupResource.java DONE
+[2888][   progress] docs-core/src/main/java/com/sismics/docs/core/util/jpa/PaginatedLists.java starting
+[2888][   progress] docs-core/src/main/java/com/sismics/docs/core/util/jpa/PaginatedLists.java DONE
+[2888][   progress] docs-core/src/main/java/com/sismics/docs/core/util/action/Action.java starting
+[2888][   progress] docs-core/src/main/java/com/sismics/docs/core/util/action/Action.java DONE
+[2888][   progress] docs-core/src/main/java/com/sismics/docs/core/listener/async/AclDeletedAsyncListener.java starting
+[2888][   progress] docs-core/src/main/java/com/sismics/docs/core/listener/async/AclDeletedAsyncListener.java DONE
+[2888][   progress] docs-core/src/main/java/com/sismics/docs/core/listener/async/RouteStepValidateAsyncListener.java starting
+[2888][   progress] docs-core/src/main/java/com/sismics/docs/core/listener/async/RouteStepValidateAsyncListener.java DONE
+[2888][   progress] docs-core/src/main/java/com/sismics/docs/core/constant/ActionType.java starting
+[2888][   progress] docs-core/src/main/java/com/sismics/docs/core/constant/ActionType.java DONE
+[2888][   progress] docs-core/src/main/java/com/sismics/docs/core/util/format/VideoFormatHandler.java starting
+[2888][   progress] docs-core/src/main/java/com/sismics/docs/core/util/format/VideoFormatHandler.java DONE
+[2888][   progress] docs-core/src/main/java/com/sismics/docs/core/dao/RouteDao.java starting
+[2888][   progress] docs-core/src/main/java/com/sismics/docs/core/dao/RouteDao.java DONE
+[2888][   progress] docs-core/src/main/java/com/sismics/docs/core/util/MetadataUtil.java starting
+[2888][   progress] docs-core/src/main/java/com/sismics/docs/core/util/MetadataUtil.java DONE
+[2888][   progress] docs-core/src/test/java/com/sismics/util/TestImageUtil.java starting
+[2888][   progress] docs-core/src/test/java/com/sismics/util/TestImageUtil.java DONE
+[2888][   progress] docs-core/src/main/java/com/sismics/docs/core/event/PasswordLostEvent.java starting
+[2888][   progress] docs-core/src/main/java/com/sismics/docs/core/event/PasswordLostEvent.java DONE
+[2888][   progress] docs-core/src/main/java/com/sismics/docs/core/event/DocumentUpdatedAsyncEvent.java starting
+[2888][   progress] docs-core/src/main/java/com/sismics/docs/core/event/DocumentUpdatedAsyncEvent.java DONE
+[2888][   progress] docs-core/src/main/java/com/sismics/docs/core/util/format/PdfFormatHandler.java starting
+[2888][   progress] docs-core/src/main/java/com/sismics/docs/core/util/format/PdfFormatHandler.java DONE
+[2888][   progress] docs-core/src/main/java/com/sismics/docs/core/dao/RoleBaseFunctionDao.java starting
+[2888][   progress] docs-core/src/main/java/com/sismics/docs/core/dao/RoleBaseFunctionDao.java DONE
+[2888][   progress] docs-core/src/main/java/com/sismics/util/css/Selector.java starting
+[2888][   progress] docs-core/src/main/java/com/sismics/util/css/Selector.java DONE
+[2888][   progress] docs-core/src/main/java/com/sismics/docs/core/model/jpa/RoleBaseFunction.java starting
+[2888][   progress] docs-core/src/main/java/com/sismics/docs/core/model/jpa/RoleBaseFunction.java DONE
+[2888][   progress] docs-web-common/src/main/java/com/sismics/rest/exception/ClientException.java starting
+[2888][   progress] docs-web-common/src/main/java/com/sismics/rest/exception/ClientException.java DONE
+[2888][   progress] docs-core/src/main/java/com/sismics/docs/core/event/AclEvent.java starting
+[2888][   progress] docs-core/src/main/java/com/sismics/docs/core/event/AclEvent.java DONE
+[2888][   progress] docs-web/src/main/java/com/sismics/docs/rest/resource/TagResource.java starting
+[2886][   progress] docs-web/src/main/java/com/sismics/docs/rest/resource/ShareResource.java DONE
+[2886][   progress] docs-core/src/test/java/com/sismics/docs/core/util/TestEncryptUtil.java starting
+[2886][   progress] docs-core/src/test/java/com/sismics/docs/core/util/TestEncryptUtil.java DONE
+[2886][   progress] docs-web/src/test/java/com/sismics/docs/rest/TestSecurity.java starting
+[2886][   progress] docs-web/src/test/java/com/sismics/docs/rest/TestSecurity.java DONE
+[2886][   progress] docs-core/src/main/java/com/sismics/docs/core/constant/AclTargetType.java starting
+[2886][   progress] docs-core/src/main/java/com/sismics/docs/core/constant/AclTargetType.java DONE
+[2886][   progress] docs-core/src/main/java/com/sismics/docs/core/util/FileUtil.java starting
+[2886][   progress] docs-core/src/main/java/com/sismics/docs/core/util/FileUtil.java DONE
+[2886][   progress] docs-core/src/main/java/com/sismics/docs/core/dao/DocumentDao.java starting
+[2886][   progress] docs-core/src/main/java/com/sismics/docs/core/dao/DocumentDao.java DONE
+[2886][   progress] docs-core/src/test/java/com/sismics/util/TestResourceUtil.java starting
+[2886][   progress] docs-core/src/test/java/com/sismics/util/TestResourceUtil.java DONE
+[2886][   progress] docs-web/src/main/java/com/sismics/docs/rest/resource/ThemeResource.java starting
+[2885][   progress] docs-web/src/main/java/com/sismics/docs/rest/resource/AppResource.java DONE
+[2885][   progress] docs-core/src/main/java/com/sismics/docs/core/event/FileUpdatedAsyncEvent.java starting
+[2885][   progress] docs-core/src/main/java/com/sismics/docs/core/event/FileUpdatedAsyncEvent.java DONE
+[2885][   progress] docs-core/src/main/java/com/sismics/docs/core/listener/async/AclCreatedAsyncListener.java starting
+[2885][   progress] docs-core/src/main/java/com/sismics/docs/core/listener/async/AclCreatedAsyncListener.java DONE
+[2885][   progress] docs-core/src/main/java/com/sismics/util/mime/MimeType.java starting
+[2885][   progress] docs-core/src/main/java/com/sismics/util/mime/MimeType.java DONE
+[2885][   progress] docs-core/src/main/java/com/sismics/docs/core/dao/criteria/UserCriteria.java starting
+[2885][   progress] docs-core/src/main/java/com/sismics/docs/core/dao/criteria/UserCriteria.java DONE
+[2885][   progress] docs-core/src/main/java/com/sismics/util/context/ThreadLocalContext.java starting
+[2885][   progress] docs-core/src/main/java/com/sismics/util/context/ThreadLocalContext.java DONE
+[2885][   progress] docs-core/src/main/java/com/sismics/docs/core/util/jpa/PaginatedList.java starting
+[2885][   progress] docs-core/src/main/java/com/sismics/docs/core/util/jpa/PaginatedList.java DONE
+[2885][   progress] docs-core/src/main/java/com/sismics/docs/core/dao/dto/AclDto.java starting
+[2885][   progress] docs-core/src/main/java/com/sismics/docs/core/dao/dto/AclDto.java DONE
+[2885][   progress] docs-core/src/main/java/com/sismics/docs/core/event/RouteStepValidateEvent.java starting
+[2885][   progress] docs-core/src/main/java/com/sismics/docs/core/event/RouteStepValidateEvent.java DONE
+[2885][   progress] docs-web/src/main/java/com/sismics/docs/rest/resource/MetadataResource.java starting
+[2886][   progress] docs-web/src/main/java/com/sismics/docs/rest/resource/ThemeResource.java DONE
+[2886][   progress] docs-core/src/main/java/com/sismics/docs/core/listener/async/DocumentCreatedAsyncListener.java starting
+[2887][   progress] docs-web/src/test/java/com/sismics/docs/rest/TestAclResource.java DONE
+[2887][   progress] docs-core/src/main/java/com/sismics/docs/core/dao/AclDao.java starting
+[2887][   progress] docs-core/src/main/java/com/sismics/docs/core/dao/AclDao.java DONE
+[2887][   progress] docs-core/src/main/java/com/sismics/util/css/Rule.java starting
+[2887][   progress] docs-core/src/main/java/com/sismics/util/css/Rule.java DONE
+[2887][   progress] docs-web/src/main/java/com/sismics/docs/rest/resource/AuditLogResource.java starting
+[2886][   progress] docs-core/src/main/java/com/sismics/docs/core/listener/async/DocumentCreatedAsyncListener.java DONE
+[2886][   progress] docs-core/src/main/java/com/sismics/docs/core/event/FileEvent.java starting
+[2886][   progress] docs-core/src/main/java/com/sismics/docs/core/event/FileEvent.java DONE
+[2886][   progress] docs-web-common/src/main/java/com/sismics/security/IPrincipal.java starting
+[2886][   progress] docs-web-common/src/main/java/com/sismics/security/IPrincipal.java DONE
+[2886][   progress] docs-core/src/main/java/com/sismics/util/jpa/DialectUtil.java starting
+[2886][   progress] docs-core/src/main/java/com/sismics/util/jpa/DialectUtil.java DONE
+[2886][   progress] docs-core/src/main/java/com/sismics/docs/core/dao/AuthenticationTokenDao.java starting
+[2886][   progress] docs-core/src/main/java/com/sismics/docs/core/dao/AuthenticationTokenDao.java DONE
+[2886][   progress] docs-core/src/main/java/com/sismics/docs/core/util/indexing/IndexingHandler.java starting
+[2886][   progress] docs-core/src/main/java/com/sismics/docs/core/util/indexing/IndexingHandler.java DONE
+[2885][   progress] docs-web/src/main/java/com/sismics/docs/rest/resource/MetadataResource.java DONE
+[2888][   progress] docs-web/src/main/java/com/sismics/docs/rest/resource/TagResource.java DONE
+[2887][   progress] docs-web/src/main/java/com/sismics/docs/rest/resource/AuditLogResource.java DONE
+[2678][      debug] Backend stats:
+[2678][      debug]   summary_file_try_load= 85428
+[2678][      debug]   summary_read_from_disk= 2194
+[2678][      debug]   summary_cache_hits= 64082 (42%)
+[2678][      debug]   summary_cache_misses= 85428
+[2678][      debug]   ondemand_procs_analyzed= 1976
+[2678][      debug]   ondemand_local_cache_hits= 70174 (92%)
+[2678][      debug]   ondemand_local_cache_misses= 5743
+[2678][      debug]   proc_locker_lock_time_user= 0.00000000
+[2678][      debug]   proc_locker_lock_time_sys= 0.00000000
+[2678][      debug]   proc_locker_lock_time_wall= 0.00000000
+[2678][      debug]   proc_locker_unlock_time_user= 0.00000000
+[2678][      debug]   proc_locker_unlock_time_sys= 0.00000000
+[2678][      debug]   proc_locker_unlock_time_wall= 0.00000000
+[2678][      debug]   restart_scheduler_useful_time_user= 0.00000000
+[2678][      debug]   restart_scheduler_useful_time_sys= 0.00000000
+[2678][      debug]   restart_scheduler_useful_time_wall= 0.00000000
+[2678][      debug]   restart_scheduler_total_time_user= 0.00000000
+[2678][      debug]   restart_scheduler_total_time_sys= 0.00000000
+[2678][      debug]   restart_scheduler_total_time_wall= 0.00000000
+[2678][      debug]   
+[2678][      debug] GC stats for backend_stats.gc_stats_add.:
+[2678][      debug]   minor_words: 8.76481e+10
+[2678][      debug]   promoted_words: 5.89694e+08
+[2678][      debug]   major_words: 6.50808e+08
+[2678][      debug]   minor_collections: 83775
+[2678][      debug]   major_collections: 398
+[2678][      debug]   compactions: 0
+[2678][      debug]   top_heap_words: 33451008
+[2678][      debug]   
+[2678][      debug] GC stats for backend_stats.gc_stats_max.:
+[2678][      debug]   minor_words: 2.21222e+10
+[2678][      debug]   promoted_words: 1.74703e+08
+[2678][      debug]   major_words: 1.86124e+08
+[2678][      debug]   minor_collections: 21144
+[2678][      debug]   major_collections: 108
+[2678][      debug]   compactions: 0
+[2678][      debug]   top_heap_words: 9226240
+[2678][      debug]   
+[2678][      debug] Average over 4 processes
+[2678][      debug] GC stats for backend_stats.gc_stats_average.:
+[2678][      debug]   minor_words: 2.1912e+10
+[2678][      debug]   promoted_words: 1.47424e+08
+[2678][      debug]   major_words: 1.62702e+08
+[2678][      debug]   minor_collections: 20943
+[2678][      debug]   major_collections: 99
+[2678][      debug]   compactions: 0
+[2678][      debug]   top_heap_words: 8362752
+[2678][      debug]   
+[2678][      debug] Analysis phase finished in 1min33s
+[2678][      debug] backend_stats.scheduler_process_analysis_time_user= 0.57090300
+[2678][      debug] backend_stats.scheduler_process_analysis_time_sys= 0.36315700
+[2678][      debug] backend_stats.scheduler_process_analysis_time_wall= 93.57968671
+[2678][      debug] GC stats for analysis_scheduler:
+[2678][      debug]   minor_words: 9.12317e+07
+[2678][      debug]   promoted_words: 38498
+[2678][      debug]   major_words: 47204
+[2678][      debug]   minor_collections: 87
+[2678][      debug]   major_collections: 2
+[2678][      debug]   compactions: 1
+[2678][      debug]   top_heap_words: 1006592
+[2678][      debug]   
+[2678][      debug] GC stats for report:
+[2678][      debug]   minor_words: 2.4739e+06
+[2678][      debug]   promoted_words: 137259
+[2678][      debug]   major_words: 653406
+[2678][      debug]   minor_collections: 3
+[2678][      debug]   major_collections: 0
+[2678][      debug]   compactions: 0
+[2678][      debug]   top_heap_words: 1157632
+[2678][      debug]   
+[2678][      debug] GC stats for main_process_full:
+[2678][      debug]   minor_words: 9.57007e+07
+[2678][      debug]   promoted_words: 557022
+[2678][      debug]   major_words: 1.64639e+06
+[2678][      debug]   minor_collections: 95
+[2678][      debug]   major_collections: 4
+[2678][      debug]   compactions: 2
+[2678][      debug]   top_heap_words: 1157632
+[2678][      debug]   
+[2684][      debug] Sqlite write daemon: terminating
